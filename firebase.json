@@ -2,10 +2,33 @@
   "hosting": {
     "site": "gokarvon",
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "gokarvon.web.app",
+        "destination": "https://gokarvon.com",
+        "type": 301
+      },
+      {
+        "source": "gokarvon.firebaseapp.com",
+        "destination": "https://gokarvon.com",
+        "type": 301
+      },
+      {
+        "source": "gokarvon.web.app",
+        "destination": "https://www.gokarvon.com",
+        "type": 301
+      }
     ]
-  }
+  },
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
 }

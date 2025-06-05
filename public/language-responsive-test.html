@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karvon - Language Responsive Test</title>
+    <link rel="stylesheet" href="i18n.css">
+    <script src="i18n.js" defer></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #073c77;
+            color: white;
+            padding: 15px;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .test-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #073c77;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #ff6404;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .device-simulator {
+            margin-top: 40px;
+        }
+
+        .device-controls {
+            margin-bottom: 20px;
+        }
+
+        .device-frame {
+            border: 2px solid #ccc;
+            margin: 0 auto;
+            transition: width 0.3s ease;
+        }
+
+        .device-header {
+            background-color: #073c77;
+            color: white;
+            padding: 10px 15px;
+            position: relative;
+        }
+
+        .device-body {
+            padding: 15px;
+        }
+
+        .info-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile menu simulation */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+        }
+
+        .hamburger-menu .line {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+        }
+
+        /* Responsive modes */
+        @media (max-width: 767px) {
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Karvon</div>
+
+            <!-- Language Dropdown -->
+            <div class="language-dropdown">
+                <button id="languageDropdownBtn" class="language-dropdown-btn">
+                    <span class="current-lang">EN</span>
+                    <span class="dropdown-icon">▼</span>
+                </button>
+                <div id="languageDropdownContent" class="language-dropdown-content">
+                    <div data-lang="en" class="language-dropdown-item active">
+                        <span class="language-flag">🇬🇧</span>
+                        <span class="language-name" data-i18n="language.en">English</span>
+                    </div>
+                    <div data-lang="ru" class="language-dropdown-item">
+                        <span class="language-flag">🇷🇺</span>
+                        <span class="language-name" data-i18n="language.ru">Russian</span>
+                    </div>
+                    <div data-lang="uz" class="language-dropdown-item">
+                        <span class="language-flag">🇺🇿</span>
+                        <span class="language-name" data-i18n="language.uz">Uzbek</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hamburger menu for mobile view -->
+            <div class="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="test-container">
+        <h1>Language Dropdown Responsive Test</h1>
+
+        <div class="info-box">
+            <h3>Test Instructions</h3>
+            <p>This page allows you to test the language dropdown in various screen sizes.</p>
+            <p>Current language: <span id="current-lang"></span></p>
+            <p>Current viewport width: <span id="viewport-width"></span>px</p>
+        </div>
+
+        <div class="test-section">
+            <h2>Test Content</h2>
+            <h3 data-i18n="hero.title">Book Services Smarter, Manage Businesses Better</h3>
+            <p data-i18n="hero.description">Karvon empowers clients to find and book services with ease, while giving
+                businesses the tools to manage bookings, attract new clients, and grow effortlessly.</p>
+        </div>
+
+        <div class="device-simulator">
+            <h2>Device Simulator</h2>
+            <div class="device-controls">
+                <button id="mobile-view">Mobile View (320px)</button>
+                <button id="tablet-view">Tablet View (768px)</button>
+                <button id="desktop-view">Desktop View (1024px)</button>
+                <button id="large-desktop-view">Large Desktop View (1440px)</button>
+            </div>
+
+            <div class="device-frame" style="width: 100%; max-width: 1024px;">
+                <div class="device-header">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>Karvon</div>
+                        <!-- Language dropdown simulation -->
+                        <div class="language-dropdown" style="position: relative;">
+                            <button class="language-dropdown-btn">
+                                <span class="current-lang">EN</span>
+                                <span class="dropdown-icon">▼</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-body">
+                    <p>This is a simulation of how the language dropdown would appear on different screen sizes.</p>
+                    <p>The actual behavior is controlled by the CSS in i18n.css.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Keyboard Navigation Test</h2>
+            <p>Try using the keyboard to navigate the language dropdown:</p>
+            <ol>
+                <li>Press <strong>Tab</strong> to focus on the language dropdown button</li>
+                <li>Press <strong>Enter</strong> or <strong>Space</strong> to open the dropdown</li>
+                <li>Use <strong>Up</strong> and <strong>Down</strong> arrow keys to navigate between languages</li>
+                <li>Press <strong>Enter</strong> to select a language</li>
+                <li>Press <strong>Escape</strong> to close the dropdown without selecting</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>Accessibility Features</h2>
+            <ul>
+                <li>ARIA attributes added to the dropdown for screen readers</li>
+                <li>Keyboard navigation support</li>
+                <li>Visible focus styles</li>
+                <li>Color contrast for readability</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Display current language
+            const currentLangElement = document.getElementById('current-lang');
+            setTimeout(() => {
+                currentLangElement.textContent = window.i18n.getCurrentLanguage();
+            }, 100);
+
+            // Update language display when changed
+            document.querySelectorAll('.language-dropdown-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    setTimeout(() => {
+                        currentLangElement.textContent = window.i18n.getCurrentLanguage();
+                    }, 100);
+                });
+            });
+
+            // Display viewport width
+            const viewportWidthElement = document.getElementById('viewport-width');
+            function updateViewportWidth() {
+                viewportWidthElement.textContent = window.innerWidth;
+            }
+            updateViewportWidth();
+            window.addEventListener('resize', updateViewportWidth);
+
+            // Device simulator controls
+            const deviceFrame = document.querySelector('.device-frame');
+            document.getElementById('mobile-view').addEventListener('click', () => {
+                deviceFrame.style.width = '320px';
+            });
+            document.getElementById('tablet-view').addEventListener('click', () => {
+                deviceFrame.style.width = '768px';
+            });
+            document.getElementById('desktop-view').addEventListener('click', () => {
+                deviceFrame.style.width = '1024px';
+            });
+            document.getElementById('large-desktop-view').addEventListener('click', () => {
+                deviceFrame.style.width = '100%';
+                deviceFrame.style.maxWidth = '1440px';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Karvon Localization Test">
+    <meta name="description" content="Test page for Karvon localization">
+    <title>Localization Test</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="i18n.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="i18n.js" defer=""></script>
+    <style>
+        .test-section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .test-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 3px;
+        }
+
+        .test-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            margin-top: 0;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+
+        .status-success {
+            background-color: #4CAF50;
+        }
+
+        .status-error {
+            background-color: #F44336;
+        }
+
+        .result-value {
+            font-family: monospace;
+            padding: 2px 6px;
+            background-color: #eee;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" class="u-body u-xl-mode"
+    data-lang="en">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Karvon Localization Test</h1>
+
+        <!-- Language Selector -->
+        <div class="language-dropdown">
+            <button id="languageDropdownBtn" class="language-dropdown-btn">
+                <span class="current-lang">EN</span>
+                <span class="dropdown-icon">▼</span>
+            </button>
+            <div id="languageDropdownContent" class="language-dropdown-content">
+                <div data-lang="en" class="language-dropdown-item active">
+                    <span class="language-flag">🇬🇧</span>
+                    <span class="language-name" data-i18n="language.en">English</span>
+                </div>
+                <div data-lang="ru" class="language-dropdown-item">
+                    <span class="language-flag">🇷🇺</span>
+                    <span class="language-name" data-i18n="language.ru">Russian</span>
+                </div>
+                <div data-lang="uz" class="language-dropdown-item">
+                    <span class="language-flag">🇺🇿</span>
+                    <span class="language-name" data-i18n="language.uz">Uzbek</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="test-section">
+            <h3 class="section-title">Navigation</h3>
+            <div class="test-item">
+                <div class="test-title">Home Link:</div>
+                <span data-i18n="nav.home">Home</span>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Apps Link:</div>
+                <span data-i18n="nav.apps">Apps</span>
+            </div>
+            <div class="test-item">
+                <div class="test-title">About Link:</div>
+                <span data-i18n="nav.about">About</span>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Help Link:</div>
+                <span data-i18n="nav.help">Help</span>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="test-section">
+            <h3 class="section-title">Hero Section</h3>
+            <div class="test-item">
+                <div class="test-title">Main Title:</div>
+                <div data-i18n="hero.title">Book Services Smarter, Manage Businesses Better</div>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Description:</div>
+                <div data-i18n="hero.description">Karvon empowers clients to find and book services with ease, while
+                    giving businesses the tools to manage bookings, attract new clients, and grow effortlessly. From car
+                    rentals to sports venues and medical services, Karvon connects you to convenience and success. Start
+                    your journey with Karvon today.</div>
+            </div>
+        </div>
+
+        <!-- Button Tests -->
+        <div class="test-section">
+            <h3 class="section-title">Button Tests</h3>
+            <div class="test-item">
+                <div class="test-title">For Users:</div>
+                <button class="u-btn" data-i18n="buttons.forUsers">FOR USERS</button>
+            </div>
+            <div class="test-item">
+                <div class="test-title">For Businesses:</div>
+                <button class="u-btn" data-i18n="buttons.forBusinesses">FOR BUSINESSES</button>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Submit Button:</div>
+                <button class="u-btn" data-i18n="buttons.submit">Submit</button>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="test-section">
+            <h3 class="section-title">Categories Section</h3>
+            <div class="test-item">
+                <div class="test-title">Section Title:</div>
+                <div data-i18n="sections.categories.title">Many Categories and Services</div>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Sports:</div>
+                <div>
+                    <strong data-i18n="sections.categories.sports.title">Sports</strong>
+                    <p data-i18n="sections.categories.sports.description">Rent sports locations and venues</p>
+                </div>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Car Rental:</div>
+                <div>
+                    <strong data-i18n="sections.categories.carRental.title">Car Rental</strong>
+                    <p data-i18n="sections.categories.carRental.description">Rent many car from different brands and
+                        types</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Elements -->
+        <div class="test-section">
+            <h3 class="section-title">Form Elements</h3>
+            <div class="test-item">
+                <div class="test-title">Name Input:</div>
+                <label data-i18n="sections.contacts.form.name">Name</label>
+                <input type="text" data-i18n-placeholder="sections.contacts.form.namePlaceholder"
+                    placeholder="Enter your Name">
+            </div>
+            <div class="test-item">
+                <div class="test-title">Email Input:</div>
+                <label data-i18n="sections.contacts.form.email">Email</label>
+                <input type="email" data-i18n-placeholder="sections.contacts.form.emailPlaceholder"
+                    placeholder="Enter a valid email address">
+            </div>
+            <div class="test-item">
+                <div class="test-title">Message Textarea:</div>
+                <label data-i18n="sections.contacts.form.message">Message</label>
+                <textarea data-i18n-placeholder="sections.contacts.form.messagePlaceholder"
+                    placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+
+        <!-- Footer Test -->
+        <div class="test-section">
+            <h3 class="section-title">Footer</h3>
+            <div class="test-item">
+                <div class="test-title">Title:</div>
+                <div data-i18n="footer.title">Karvon Labs</div>
+            </div>
+            <div class="test-item">
+                <div class="test-title">Copyright:</div>
+                <div data-i18n="footer.copyright">© 2025 Karvon</div>
+            </div>
+        </div>
+
+        <div class="u-align-center">
+            <a href="index.html" class="u-btn u-button-style">Back to Homepage</a>
+        </div>
+    </div>
+
+    <script>
+        // Add a log for testing purposes
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Test page loaded, current language:', localStorage.getItem('karvon-language') || 'en');
+        });
+    </script>
+</body>
+
+</html>

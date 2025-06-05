@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karvon Localization Test</title>
+    <link rel="stylesheet" href="i18n.css">
+    <script src="i18n.js" defer></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0077cc;
+        }
+
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .language-selector {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Karvon Localization Test Page</h1>
+
+    <div class="language-selector">
+        <button data-lang="en">English</button>
+        <button data-lang="ru">Русский</button>
+        <button data-lang="uz">O'zbek</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Navigation</h2>
+        <ul>
+            <li data-i18n="nav.home">Home</li>
+            <li data-i18n="nav.apps">Apps</li>
+            <li data-i18n="nav.about">About</li>
+            <li data-i18n="nav.help">Help</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Hero Section</h2>
+        <h3 data-i18n="hero.title">Book Services Smarter, Manage Businesses Better</h3>
+        <p data-i18n="hero.description">Karvon empowers clients to find and book services with ease, while giving
+            businesses the tools to manage bookings, attract new clients, and grow effortlessly. From car rentals to
+            sports venues and medical services, Karvon connects you to convenience and success. Start your journey with
+            Karvon today.</p>
+        <button data-i18n="hero.discover">discover</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Clients Section</h2>
+        <h3 data-i18n="sections.clients.title">Karvon For Clients: Effortless Booking, Tailored for You</h3>
+        <p data-i18n="sections.clients.description">Find services that fit your needs in just a few clicks. Karvon
+            simplifies your booking process, saving time and effort. Compare multiple businesses, view pricing upfront,
+            and secure your spot instantly — all in one place.</p>
+        <button data-i18n="buttons.forClients">FOR CLIENTS</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Partners Section</h2>
+        <h3 data-i18n="sections.partners.title">Karvon For Partners: Grow Your Business with Karvon</h3>
+        <p data-i18n="sections.partners.description">From managing bookings to attracting new clients, Karvon provides
+            powerful tools for businesses. Whether you're a car rental company or a sports venue, streamline your
+            operations and connect with more customers using our intuitive apps.</p>
+        <button data-i18n="buttons.forPartners">FOR PARTNERS</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Language Options</h2>
+        <ul>
+            <li data-i18n="language.en">English</li>
+            <li data-i18n="language.ru">Russian</li>
+            <li data-i18n="language.uz">Uzbek</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Current Language</h2>
+        <p>Current language code: <span id="current-lang"></span></p>
+    </div>
+
+    <script>
+        // Show the current language after initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.getElementById('current-lang').textContent = window.i18n.getCurrentLanguage();
+            }, 100);
+
+            // Add click listener to update current language display
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setTimeout(() => {
+                        document.getElementById('current-lang').textContent = window.i18n.getCurrentLanguage();
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

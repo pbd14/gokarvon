@@ -1,0 +1,121 @@
+{
+    "nav": {
+        "home": "Asosiy",
+        "apps": "Ilovalar",
+        "about": "Biz haqimizda",
+        "help": "Yordam"
+    },
+    "hero": {
+        "title": "Xizmatlarni aqlli bron qiling, biznesni yaxshiroq boshqaring",
+        "description": "Karvon mijozlarga xizmatlarni osongina topish va bron qilish imkoniyatini berish bilan birga, biznesga bron qilishni boshqarish, yangi mijozlarni jalb qilish va osongina o'sish uchun vositalar beradi. Avtomobil ijarasi va sport inshootlaridan tibbiy xizmatlarga qadar, Karvon sizni qulaylik va muvaffaqiyatga bog'laydi. Bugun Karvon bilan o'z sayohatingizni boshlang.",
+        "discover": "ko'proq bilish"
+    },
+    "buttons": {
+        "forUsers": "FOYDALANUVCHILAR UCHUN",
+        "forBusinesses": "BIZNES UCHUN",
+        "forClients": "MIJOZLAR UCHUN",
+        "forPartners": "HAMKORLAR UCHUN",
+        "appStore": "APP STORE",
+        "webApp": "VEB ILOVA",
+        "submit": "Yuborish"
+    },
+    "sections": {
+        "clients": {
+            "title": "Mijozlar uchun Karvon: Osongina bron qilish, siz uchun yaratilgan",
+            "description": "Bir necha marta bosish orqali o'z ehtiyojlaringizga mos keladigan xizmatlarni toping. Karvon bron qilish jarayoningizni soddalashtiradi, vaqt va kuchingizni tejaydi. Ko'plab korxonalarni solishtiring, narxni oldindan ko'ring va o'rningizni tezda oling — hammasi bir joyda."
+        },
+        "partners": {
+            "title": "Hamkorlar uchun Karvon: Karvon bilan biznesingizni rivojlantiring",
+            "description": "Bron qilishni boshqarishdan boshlab yangi mijozlarni jalb qilishgacha, Karvon biznes uchun kuchli vositalarni taqdim etadi. Siz avtomobil ijarasi kompaniyasi yoki sport maydoni bo'lsangiz ham, bizning intuitiv ilovalarda operatsiyalaringizni optimallashtiring va ko'proq mijozlar bilan bog'laning."
+        },
+        "categories": {
+            "title": "Ko'plab toifalar va xizmatlar",
+            "sports": {
+                "title": "Sport",
+                "description": "Sport joylari va maydonlarini ijaraga olish"
+            },
+            "carRental": {
+                "title": "Avtomobil ijarasi",
+                "description": "Turli markalar va turdagi avtomobillarni ijaraga olish"
+            },
+            "beauty": {
+                "title": "Go'zallik",
+                "description": "Barbershoplar va boshqa go'zallik xizmatlari"
+            },
+            "health": {
+                "title": "Sog'liq",
+                "description": "Turli shifoxonalarda tibbiy xizmatlar"
+            }
+        },
+        "comparison": {
+            "withKarvon": {
+                "title": "Karvon bilan",
+                "description": "Butun jarayon bir necha marta bosish bilan, muammosiz va tashvishsiz bajarilishi mumkin"
+            },
+            "typically": {
+                "title": "Odatda",
+                "description": "Ko'p vaqt va pul sarflaysiz. Bir nechta odamlar bilan bog'lanishingiz va ko'plab hujjatlarni to'ldirishingiz kerak."
+            }
+        },
+        "platform": {
+            "title": "Har qanday ehtiyoj uchun platforma",
+            "description": "Avtomobil ijarasi va sport maydonlaridan go'zallik va tibbiy xizmatlarga qadar, Karvon mijozlarni turli sohalardagi bizneslar bilan bog'laydi, bron qilishni oddiy va stresssiz qiladi."
+        },
+        "apps": {
+            "client": {
+                "title": "Karvon mijozlar uchun ilova"
+            },
+            "host": {
+                "title": "Karvon Host hamkorlar uchun ilova"
+            },
+            "business": {
+                "title": "Karvon Business avtomobil ijarasi uchun ilova"
+            }
+        },
+        "benefits": {
+            "find": {
+                "title": "Xizmatlarni toping va bron qiling",
+                "description": "Xizmatlarni qidirib toping, variantlarni solishtiring va bir necha marta bosish orqali darhol band qiling."
+            },
+            "manage": {
+                "title": "Bron qilishlarni oson boshqaring Biznesingizni targ'ib qiling",
+                "description": "Barcha bron qilishlaringizni bir qulay platformada kuch sarflamasdan kuzating va boshqaring. Xizmatlaringizni keng auditoriyaga ko'rsating va yangi mijozlarni osongina jalb qiling."
+            },
+            "convenience": {
+                "title": "Hammasi bir joyda qulaylik"
+            },
+            "simplified": {
+                "title": "Soddalashtirilgan bron qilish tajribasi"
+            }
+        },
+        "contacts": {
+            "title": "Aloqa ma'lumotlarimiz",
+            "company": "Karvon Labs va Tech",
+            "address": "Begoyim ko'chasi 20, Toshkent, O'zbekiston, 100178",
+            "email": "karvon.labs@gmail.com\nozodlabs@gmail.com",
+            "phone": "+ 998 90 939 7777",
+            "form": {
+                "name": "Ism",
+                "namePlaceholder": "Ismingizni kiriting",
+                "email": "Email",
+                "emailPlaceholder": "Haqiqiy email manzilini kiriting",
+                "message": "Xabar",
+                "messagePlaceholder": "Xabaringizni kiriting",
+                "success": "Rahmat! Xabaringiz yuborildi.",
+                "error": "Xabaringizni yuborib bo'lmadi. Iltimos, xatolarni tuzating va qaytadan urinib ko'ring."
+            }
+        },
+        "appLinks": {
+            "googlePlay": "Google Play"
+        }
+    },
+    "footer": {
+        "title": "Karvon Labs",
+        "copyright": "© 2025 Karvon"
+    },
+    "language": {
+        "en": "Inglizcha",
+        "ru": "Ruscha",
+        "uz": "O'zbekcha"
+    }
+}
