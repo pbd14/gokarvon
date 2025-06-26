@@ -92,8 +92,8 @@
             "title": "Наши контакты",
             "company": "Karvon Labs и Tech",
             "address": "ул. Бегойим 20, Ташкент, Узбекистан, 100178",
-            "email": "karvon.labs@gmail.com\nozodlabs@gmail.com",
-            "phone": "+ 998 90 939 7777",
+            "email": "help@gokarvon.com\nhost@gokarvon.com",
+            "phone": "+ 998 33 939 7777",
             "form": {
                 "name": "Имя",
                 "namePlaceholder": "Введите ваше имя",
@@ -111,7 +111,7 @@
     },
     "footer": {
         "title": "Karvon Labs",
-        "copyright": "© 2025 Karvon"
+        "copyright": "© 2025 Karvon Labs and Tech MCHJ"
     },
     "language": {
         "en": "Английский",
