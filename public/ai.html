@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karvon AI — The AI Booking Layer for Booking Services</title>
+    <meta name="description"
+        content="Karvon AI is a chat-first booking agent for local services. Customers book via conversation, venues get an AI assistant, and other AI agents can make bookings through Karvon AI.">
+    <meta name="keywords"
+        content="AI booking, Karvon AI, chat booking, Telegram bot, local services, agent-to-agent booking, AI assistant">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Karvon AI — The AI Booking Layer for Local Services">
+    <meta property="og:description"
+        content="Chat-first booking agent for local services. Book through conversation, not forms.">
+    <meta property="og:image" content="/assets/logos/Logo640.png">
+    <meta property="og:url" content="https://gokarvon.com/ai">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/logos/Logo512.png">
+    <link rel="apple-touch-icon" href="/assets/logos/Logo512.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/ai.css">
+</head>
+
+<body class="ai-page">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar--dark" id="navbar">
+        <div class="container navbar__inner">
+            <a href="/" class="navbar__logo">
+                <img src="/assets/logos/Logo640.png" alt="Karvon Logo" width="40" height="40">
+                <span class="navbar__wordmark" style="color: var(--white);">Karvon AI</span>
+            </a>
+
+            <div class="navbar__links" id="navLinks">
+                <a href="/" class="navbar__link" style="color: rgba(255,255,255,0.7);" data-i18n="nav.home">Home</a>
+                <a href="#problem" class="navbar__link" style="color: rgba(255,255,255,0.7);"
+                    data-i18n="nav.problem">The Problem</a>
+                <a href="#how-it-works" class="navbar__link" style="color: rgba(255,255,255,0.7);"
+                    data-i18n="nav.howItWorks">How It Works</a>
+                <a href="#agent-to-agent" class="navbar__link" style="color: rgba(255,255,255,0.7);"
+                    data-i18n="nav.agentToAgent">AI-to-AI</a>
+                <a href="#use-cases" class="navbar__link" style="color: rgba(255,255,255,0.7);"
+                    data-i18n="nav.useCases">Use Cases</a>
+                <div class="lang-switcher">
+                    <button class="lang-switcher__btn active" onclick="changeLanguage('en')" data-lang="en">EN</button>
+                    <button class="lang-switcher__btn" onclick="changeLanguage('ru')" data-lang="ru">RU</button>
+                    <button class="lang-switcher__btn" onclick="changeLanguage('uz')" data-lang="uz">UZ</button>
+                </div>
+            </div>
+
+            <div class="navbar__actions">
+                <a href="#" class="btn btn--outline-light btn--sm" onclick="openDownloadDialog(event)"
+                    data-i18n="nav.tryAi">Try Karvon AI</a>
+                <a href="#" class="btn btn--accent btn--sm" onclick="openPartnerDialog(event)"
+                    data-i18n="nav.partners">For
+                    Partners</a>
+            </div>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+                <span style="background: var(--white);"></span>
+                <span style="background: var(--white);"></span>
+                <span style="background: var(--white);"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu mobile-menu--dark" id="mobileMenu">
+        <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+        <a href="/" class="mobile-menu__link" data-i18n="nav.home">Home</a>
+        <a href="#problem" class="mobile-menu__link" data-i18n="nav.problem">The Problem</a>
+        <a href="#how-it-works" class="mobile-menu__link" data-i18n="nav.howItWorks">How It Works</a>
+        <a href="#agent-to-agent" class="mobile-menu__link" data-i18n="nav.agentToAgent">AI-to-AI</a>
+        <a href="#use-cases" class="mobile-menu__link" data-i18n="nav.useCases">Use Cases</a>
+        <div class="mobile-menu__lang">
+            <button class="lang-switcher__btn active" onclick="changeLanguage('en')" data-lang="en">EN</button>
+            <button class="lang-switcher__btn" onclick="changeLanguage('ru')" data-lang="ru">RU</button>
+            <button class="lang-switcher__btn" onclick="changeLanguage('uz')" data-lang="uz">UZ</button>
+        </div>
+        <div class="mobile-menu__actions">
+            <a href="#" class="btn btn--outline-light" onclick="openDownloadDialog(event)" data-i18n="nav.tryAi">Try
+                Karvon AI</a>
+            <a href="#" class="btn btn--accent" onclick="openPartnerDialog(event)" data-i18n="nav.partners">For
+                Partners</a>
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="ai-hero" id="ai-hero">
+        <div class="ai-hero__bg">
+            <div class="ai-hero__grid-pattern"></div>
+            <div class="ai-hero__glow ai-hero__glow--1"></div>
+            <div class="ai-hero__glow ai-hero__glow--2"></div>
+        </div>
+        <div class="container ai-hero__inner">
+            <div class="ai-hero__content anim-fade-up">
+                <div class="ai-hero__badge">
+                    <span class="ai-hero__badge-pulse"></span>
+                    <span data-i18n="aiPage.heroValues">Karvon AI</span>
+                </div>
+                <h1 class="ai-hero__title" data-i18n="aiPage.heroTitle">
+                    The AI booking layer<br>
+                    <span class="ai-hero__title--accent">for local services.</span>
+                </h1>
+                <p class="ai-hero__subtitle" data-i18n="aiPage.heroSubtitle">
+                    A chat-first booking agent that lets customers find venues, get accurate information, and
+                    <strong>complete real bookings inside chat</strong> — while giving every venue a ready-to-deploy AI
+                    assistant.
+                </p>
+                <div class="ai-hero__cta">
+                    <a href="#" class="btn btn--accent btn--xl" onclick="openDownloadDialog(event)"
+                        data-i18n="aiPage.heroCtaTry">
+                        Try Karvon AI →
+                    </a>
+                    <a href="#how-it-works" class="btn btn--outline-light btn--xl" data-i18n="aiPage.heroCtaHow">
+                        See How It Works
+                    </a>
+                </div>
+                <div class="hero__badges" style="margin-top: 1.5rem;">
+                    <div class="hero__trust-badge">
+                        <img class="hero__trust-logo" src="/assets/logos/amazon_logo.jpg" alt="Amazon" width="24"
+                            height="24">
+                        <span data-i18n="hero.amazon">Built by ex-<strong>Amazon</strong> engineers</span>
+                    </div>
+                    <div class="hero__trust-badge">
+                        <img class="hero__trust-logo" src="/assets/logos/poytaxt_bank.webp" alt="Poytaxt Bank"
+                            width="24" height="24">
+                        <span data-i18n="hero.poytaxt">Supported by <strong>Poytaxt Bank</strong> executives</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-hero__visual anim-fade-up" style="--delay: 0.2s">
+                <div class="ai-hero__mockup-wrapper">
+                    <div class="ai-hero__mockup-glow"></div>
+                    <img src="/assets/mockups/ai-chat.png" alt="Karvon AI Chat Interface" class="ai-hero__mockup"
+                        loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== THE PROBLEM ===== -->
+    <section class="ai-problem" id="problem">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag section-tag--light" data-i18n="aiPage.problemTag">The Problem</span>
+                <h2 class="ai-problem__title" data-i18n="aiPage.problemTitle">Booking local services is still<br><span
+                        class="ai-problem__title--accent">stuck in 2010.</span></h2>
+                <p class="ai-problem__subtitle" data-i18n="aiPage.problemSubtitle">While everything else has moved to
+                    instant, booking a table or a gaming
+                    room still looks like this:</p>
+            </div>
+            <div class="ai-problem__grid">
+                <div class="ai-problem__card anim-fade-up">
+                    <div class="ai-problem__card-icon">📞</div>
+                    <h3 data-i18n="aiPage.prob1Title">Call-only booking</h3>
+                    <p data-i18n="aiPage.prob1Desc">Customers must call during business hours, wait on hold, and hope
+                        someone picks up. Many just
+                        give up.</p>
+                </div>
+                <div class="ai-problem__card anim-fade-up" style="--delay: 0.1s">
+                    <div class="ai-problem__card-icon">⏳</div>
+                    <h3 data-i18n="aiPage.prob2Title">Slow replies in DMs</h3>
+                    <p data-i18n="aiPage.prob2Desc">"DM to book" — then wait hours for a response. High-intent customers
+                        lost in an unread inbox.</p>
+                </div>
+                <div class="ai-problem__card anim-fade-up" style="--delay: 0.2s">
+                    <div class="ai-problem__card-icon">🔀</div>
+                    <h3 data-i18n="aiPage.prob3Title">Fragmented channels</h3>
+                    <p data-i18n="aiPage.prob3Desc">Bookings come from Telegram, Instagram, calls, walk-ins — all
+                        tracked in spreadsheets or not
+                        tracked at all.</p>
+                </div>
+                <div class="ai-problem__card anim-fade-up" style="--delay: 0.3s">
+                    <div class="ai-problem__card-icon">🤖</div>
+                    <h3 data-i18n="aiPage.prob4Title">Not future-proof</h3>
+                    <p data-i18n="aiPage.prob4Desc">As personal AI assistants grow, users will ask <em>their</em> AI to
+                        book for them. Current
+                        systems can't handle AI-to-AI interactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AGENT-TO-AGENT ===== -->
+    <section class="ai-a2a" id="agent-to-agent">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag section-tag--light" data-i18n="aiPage.futureTag">The Future</span>
+                <h2 class="ai-a2a__title" data-i18n="aiPage.futureTitle">When every person<br>has an AI assistant.</h2>
+                <p class="ai-a2a__subtitle" data-i18n="aiPage.futureSubtitle">The way people book is about to
+                    fundamentally change. Karvon AI is ready.
+                </p>
+            </div>
+
+            <div class="ai-a2a__story anim-fade-up">
+                <div class="ai-a2a__timeline">
+                    <div class="ai-a2a__era">
+                        <div class="ai-a2a__era-label" data-i18n="aiPage.era1Label">Today</div>
+                        <h3 data-i18n="aiPage.era1Title">People search, compare, and book manually</h3>
+                        <p data-i18n="aiPage.era1Desc">Users open apps, browse, fill forms, make calls. The booking
+                            experience is fragmented and
+                            slow.</p>
+                    </div>
+                    <div class="ai-a2a__era-arrow">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                    </div>
+                    <div class="ai-a2a__era ai-a2a__era--now">
+                        <div class="ai-a2a__era-label ai-a2a__era-label--active" data-i18n="aiPage.era2Label">Karvon AI
+                            Now</div>
+                        <h3 data-i18n="aiPage.era2Title">People text what they want, AI books it</h3>
+                        <p data-i18n="aiPage.era2Desc">Customers message Karvon AI in Telegram: "Book me a PlayStation
+                            room for 3 hours." Done.
+                            Chat-native booking that just works.</p>
+                    </div>
+                    <div class="ai-a2a__era-arrow">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                    </div>
+                    <div class="ai-a2a__era ai-a2a__era--future">
+                        <div class="ai-a2a__era-label ai-a2a__era-label--future" data-i18n="aiPage.era3Label">The
+                            AI-Native Future</div>
+                        <h3 data-i18n="aiPage.era3Title">Your AI talks to Karvon AI</h3>
+                        <p data-i18n="aiPage.era3Desc">Personal AI assistants don't browse websites. They need an API, a
+                            reliable booking endpoint.
+                            Karvon AI becomes that endpoint — the universal booking interface that <em>any</em> AI agent
+                            can call.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-a2a__cards anim-fade-up">
+                <div class="ai-a2a__card">
+                    <div class="ai-a2a__card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="rgba(255,176,2,0.15)" />
+                            <path d="M16 20h16M16 24h12M16 28h8" stroke="#ffb002" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="36" cy="28" r="4" fill="#ffb002" />
+                            <path d="M34.5 28l1.5 1.5 3-3" stroke="#004225" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="aiPage.card1Title">No MCP servers needed</h3>
+                    <p data-i18n="aiPage.card1Desc">Businesses don't need to build custom AI integrations. Karvon AI
+                        provides the booking interface
+                        that other AI agents can interact with — out of the box.</p>
+                </div>
+                <div class="ai-a2a__card">
+                    <div class="ai-a2a__card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="rgba(255,176,2,0.15)" />
+                            <circle cx="16" cy="24" r="6" stroke="#ffb002" stroke-width="2" />
+                            <circle cx="32" cy="24" r="6" stroke="#ffb002" stroke-width="2" />
+                            <path d="M22 24h4" stroke="#ffb002" stroke-width="2" stroke-linecap="round" />
+                            <path d="M14 22l2 2-2 2" stroke="#ffb002" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M30 22l2 2-2 2" stroke="#ffb002" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="aiPage.card2Title">Agent-to-agent booking</h3>
+                    <p data-i18n="aiPage.card2Desc">When a user tells their personal AI "book me a table at 7," that AI
+                        can call Karvon AI's endpoint
+                        to check availability and create the booking — seamlessly.</p>
+                </div>
+                <div class="ai-a2a__card">
+                    <div class="ai-a2a__card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="12" fill="rgba(255,176,2,0.15)" />
+                            <path d="M24 14v20M14 24h20" stroke="#ffb002" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="24" cy="24" r="10" stroke="#ffb002" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="aiPage.card3Title">New distribution channel</h3>
+                    <p data-i18n="aiPage.card3Desc">Every personal AI assistant becomes a distribution channel for your
+                        venue. More booking endpoints
+                        = more bookings, with zero extra effort from the business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO SHOWCASE ===== -->
+    <section class="ai-video" id="ai-video">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag section-tag--light" data-i18n="aiPage.videoTag">See It In Action</span>
+                <h2 class="ai-video__title" data-i18n="aiPage.videoTitle">Watch Karvon AI work.</h2>
+                <p class="ai-video__subtitle" data-i18n="aiPage.videoSubtitle">A real conversation. A real booking. In
+                    under a minute.</p>
+            </div>
+            <div class="ai-video__wrapper anim-fade-up">
+                <video class="ai-video__player" controls playsinline preload="metadata"
+                    poster="/assets/mockups/ai-chat-angled.png">
+                    <source src="/assets/mockups/videos/karvon-ai-reels.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT KARVON AI IS ===== -->
+    <section class="ai-what" id="what-is">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag section-tag--light" data-i18n="aiPage.whatTag">What Karvon AI Is</span>
+                <h2 class="section-title" data-i18n="aiPage.whatTitle">More than a chatbot.<br>A booking execution
+                    engine.</h2>
+            </div>
+            <div class="ai-what__grid">
+                <div class="ai-what__card anim-fade-up">
+                    <div class="ai-what__card-number">01</div>
+                    <h3 data-i18n="aiPage.what1Title">Conversational Agent</h3>
+                    <p data-i18n="aiPage.what1Desc">Understands natural language, answers venue questions, and executes
+                        real bookings — not scripted
+                        flows.</p>
+                </div>
+                <div class="ai-what__card anim-fade-up" style="--delay: 0.1s">
+                    <div class="ai-what__card-number">02</div>
+                    <h3 data-i18n="aiPage.what2Title">Structured Booking Engine</h3>
+                    <p data-i18n="aiPage.what2Desc">Availability rules, slot management, add-ons, policies, deposits —
+                        all enforced accurately behind
+                        the chat interface.</p>
+                </div>
+                <div class="ai-what__card anim-fade-up" style="--delay: 0.2s">
+                    <div class="ai-what__card-number">03</div>
+                    <h3 data-i18n="aiPage.what3Title">Partner Product</h3>
+                    <p data-i18n="aiPage.what3Desc">Every venue gets their own AI assistant — deployable as a branded
+                        Telegram bot on their channel,
+                        handling bookings 24/7.</p>
+                </div>
+                <div class="ai-what__card anim-fade-up" style="--delay: 0.3s">
+                    <div class="ai-what__card-number">04</div>
+                    <h3 data-i18n="aiPage.what4Title">Platform &amp; API Layer</h3>
+                    <p data-i18n="aiPage.what4Desc">Exposes booking capabilities to other software and AI agents. Karvon
+                        AI becomes the booking
+                        endpoint for the AI-native world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS — CONSUMERS ===== -->
+    <section class="ai-consumer" id="how-it-works">
+        <div class="container">
+            <div class="ai-consumer__split">
+                <div class="ai-consumer__content anim-fade-up">
+                    <span class="section-tag section-tag--light" data-i18n="aiPage.consumerTag">For Customers</span>
+                    <h2 class="ai-consumer__title" data-i18n="aiPage.consumerTitle">Just text what you want.</h2>
+                    <p class="ai-consumer__subtitle" data-i18n="aiPage.consumerSubtitle">No forms, no apps to download,
+                        no learning curve. Talk to Karvon AI
+                        like you'd text a friend.</p>
+                    <div class="ai-consumer__flow">
+                        <div class="ai-consumer__step">
+                            <div class="ai-consumer__step-num">1</div>
+                            <div>
+                                <strong data-i18n="aiPage.step1Title">Message your intent</strong>
+                                <p data-i18n="aiPage.step1Desc">"Find me a quiet restaurant near center for 4 people
+                                    tonight around 7"</p>
+                            </div>
+                        </div>
+                        <div class="ai-consumer__step">
+                            <div class="ai-consumer__step-num">2</div>
+                            <div>
+                                <strong data-i18n="aiPage.step2Title">Get accurate info</strong>
+                                <p data-i18n="aiPage.step2Desc">Real photos, menus, prices, hours, policies — grounded
+                                    in venue data, not
+                                    hallucinated</p>
+                            </div>
+                        </div>
+                        <div class="ai-consumer__step">
+                            <div class="ai-consumer__step-num">3</div>
+                            <div>
+                                <strong data-i18n="aiPage.step3Title">Real availability check</strong>
+                                <p data-i18n="aiPage.step3Desc">AI checks actual slots, not guesses — so you never
+                                    arrive to find "sorry, we're full"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ai-consumer__step">
+                            <div class="ai-consumer__step-num">4</div>
+                            <div>
+                                <strong data-i18n="aiPage.step4Title">Confirm &amp; done</strong>
+                                <p data-i18n="aiPage.step4Desc">Booking created, confirmation sent. Need to reschedule?
+                                    Just text again.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-consumer__visual anim-fade-up" style="--delay: 0.2s">
+                    <img src="/assets/mockups/ai-chat.png" alt="Karvon AI Chat" class="ai-consumer__mockup"
+                        loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS — PARTNERS ===== -->
+    <section class="ai-partner" id="for-partners">
+        <div class="container">
+            <div class="ai-partner__split">
+                <div class="ai-partner__visual anim-fade-up">
+                    <img src="/assets/mockups/host-dashboard-angled.png" alt="Karvon Host Dashboard"
+                        class="ai-partner__mockup" loading="lazy">
+                </div>
+                <div class="ai-partner__content anim-fade-up" style="--delay: 0.2s">
+                    <span class="section-tag section-tag--dark" data-i18n="aiPage.partnerTag">For Partners</span>
+                    <h2 class="section-title" style="color: var(--green);" data-i18n="aiPage.partnerTitle">Your venue
+                        gets its own<br>AI booking
+                        assistant.</h2>
+                    <p class="section-subtitle" data-i18n="aiPage.partnerSubtitle">No engineers needed. Deploy a branded
+                        AI agent that handles bookings,
+                        FAQs, and inquiries — 24/7.</p>
+                    <div class="ai-partner__features">
+                        <div class="ai-partner__feature">
+                            <div class="ai-partner__feature-icon">🧠</div>
+                            <div>
+                                <strong data-i18n="aiPage.partnerFeat1Title">AI agent trained on your venue</strong>
+                                <p data-i18n="aiPage.partnerFeat1Desc">Knows your services, prices, hours, policies,
+                                    photos, and FAQs</p>
+                            </div>
+                        </div>
+                        <div class="ai-partner__feature">
+                            <div class="ai-partner__feature-icon">⚙️</div>
+                            <div>
+                                <strong data-i18n="aiPage.partnerFeat2Title">Simple onboarding</strong>
+                                <p data-i18n="aiPage.partnerFeat2Desc">Define services, slot rules, add-ons, booking
+                                    policies — all via dashboard</p>
+                            </div>
+                        </div>
+                        <div class="ai-partner__feature">
+                            <div class="ai-partner__feature-icon">📱</div>
+                            <div>
+                                <strong data-i18n="aiPage.partnerFeat3Title">Your own branded bot</strong>
+                                <p data-i18n="aiPage.partnerFeat3Desc">Deploy as your venue's Telegram bot — customers
+                                    book in your channel</p>
+                            </div>
+                        </div>
+                        <div class="ai-partner__feature">
+                            <div class="ai-partner__feature-icon">📊</div>
+                            <div>
+                                <strong data-i18n="aiPage.partnerFeat4Title">Dashboard &amp; analytics</strong>
+                                <p data-i18n="aiPage.partnerFeat4Desc">Manage bookings, review chat logs, see conversion
+                                    analytics, configure availability
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn--primary" onclick="openPartnerDialog(event)" style="margin-top: 1rem;"
+                        data-i18n="aiPage.partnerCta">Get Karvon Host →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASES ===== -->
+    <section class="ai-usecases" id="use-cases">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag" data-i18n="aiPage.useCaseTag">Use Cases</span>
+                <h2 class="section-title" data-i18n="aiPage.useCaseTitle">Works across every<br>local service category.
+                </h2>
+                <p class="section-subtitle" data-i18n="aiPage.useCaseSubtitle">Karvon AI adapts to the booking flow of
+                    each industry.</p>
+            </div>
+            <div class="ai-usecases__grid">
+                <div class="ai-usecases__card anim-fade-up">
+                    <div class="ai-usecases__card-emoji">🍽️</div>
+                    <h3 data-i18n="aiPage.uc1Title">Restaurants</h3>
+                    <ul>
+                        <li data-i18n="aiPage.uc1Li1">Reserve tables for specific party sizes</li>
+                        <li data-i18n="aiPage.uc1Li2">Handle dietary restrictions &amp; special requests</li>
+                        <li data-i18n="aiPage.uc1Li3">Group bookings &amp; event reservations</li>
+                        <li data-i18n="aiPage.uc1Li4">Answer menus, parking, hours, policies</li>
+                    </ul>
+                </div>
+                <div class="ai-usecases__card anim-fade-up" style="--delay: 0.1s">
+                    <div class="ai-usecases__card-emoji">🎮</div>
+                    <h3 data-i18n="aiPage.uc2Title">Gaming Clubs</h3>
+                    <ul>
+                        <li data-i18n="aiPage.uc2Li1">Book PC seats or console rooms by time slot</li>
+                        <li data-i18n="aiPage.uc2Li2">Add-ons: VIP room, snacks, extra equipment</li>
+                        <li data-i18n="aiPage.uc2Li3">Handle memberships &amp; tournament registration</li>
+                        <li data-i18n="aiPage.uc2Li4">Group session bookings</li>
+                    </ul>
+                </div>
+                <div class="ai-usecases__card anim-fade-up" style="--delay: 0.2s">
+                    <div class="ai-usecases__card-emoji">⚽</div>
+                    <h3 data-i18n="aiPage.uc3Title">Sports Venues</h3>
+                    <ul>
+                        <li data-i18n="aiPage.uc3Li1">Book courts, fields, and arenas</li>
+                        <li data-i18n="aiPage.uc3Li2">Recurring reservations for teams</li>
+                        <li data-i18n="aiPage.uc3Li3">Equipment rentals &amp; coaching add-ons</li>
+                        <li data-i18n="aiPage.uc3Li4">Handle group sizes &amp; time slots</li>
+                    </ul>
+                </div>
+                <div class="ai-usecases__card anim-fade-up" style="--delay: 0.3s">
+                    <div class="ai-usecases__card-emoji">💇</div>
+                    <h3 data-i18n="aiPage.uc4Title">Beauty &amp; Services</h3>
+                    <ul>
+                        <li data-i18n="aiPage.uc4Li1">Appointment scheduling with staff selection</li>
+                        <li data-i18n="aiPage.uc4Li2">Service bundles &amp; upsells</li>
+                        <li data-i18n="aiPage.uc4Li3">Deposit handling &amp; cancellation policies</li>
+                        <li data-i18n="aiPage.uc4Li4">Multi-service bookings in one session</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ADVANTAGES ===== -->
+    <section class="ai-advantages" id="advantages">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag section-tag--light" data-i18n="aiPage.advTag">Advantages</span>
+                <h2 class="ai-advantages__title" data-i18n="aiPage.advTitle">Why Karvon AI wins.</h2>
+            </div>
+            <div class="ai-advantages__split">
+                <div class="ai-advantages__col anim-fade-up">
+                    <h3 class="ai-advantages__col-title">
+                        <span class="ai-advantages__col-icon">👤</span>
+                        <span data-i18n="aiPage.advCustTitle">For Customers</span>
+                    </h3>
+                    <div class="ai-advantages__items">
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advCust1Title">Instant 24/7 booking</strong>
+                            <p data-i18n="aiPage.advCust1Desc">No calls, no waiting for callbacks. Book at 2 AM if you
+                                want.</p>
+                        </div>
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advCust2Title">Discovery + booking in one flow</strong>
+                            <p data-i18n="aiPage.advCust2Desc">Ask questions, compare options, and book — all in one
+                                chat thread.</p>
+                        </div>
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advCust3Title">Easy changes</strong>
+                            <p data-i18n="aiPage.advCust3Desc">Reschedule or cancel by texting. No phone menus, no
+                                emails.</p>
+                        </div>
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advCust4Title">Works where you already are</strong>
+                            <p data-i18n="aiPage.advCust4Desc">In Telegram, in the Karvon app — no new app to download.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-advantages__col ai-advantages__col--partner anim-fade-up" style="--delay: 0.15s">
+                    <h3 class="ai-advantages__col-title">
+                        <span class="ai-advantages__col-icon">🏢</span>
+                        <span data-i18n="aiPage.advPartnerTitle">For Venues</span>
+                    </h3>
+                    <div class="ai-advantages__items">
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advPartner1Title">Less staff workload</strong>
+                            <p data-i18n="aiPage.advPartner1Desc">Automates repetitive inquiries and booking
+                                coordination.
+                            </p>
+                        </div>
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advPartner2Title">Higher conversion</strong>
+                            <p data-i18n="aiPage.advPartner2Desc">Fewer drop-offs when booking is instant and
+                                frictionless.
+                            </p>
+                        </div>
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advPartner3Title">Fast digital maturity</strong>
+                            <p data-i18n="aiPage.advPartner3Desc">Get an AI booking assistant without hiring engineers.
+                            </p>
+                        </div>
+                        <div class="ai-advantages__item">
+                            <strong data-i18n="aiPage.advPartner4Title">Future-proof</strong>
+                            <p data-i18n="aiPage.advPartner4Desc">Ready for a world where AI assistants initiate
+                                bookings
+                                on behalf of users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="ai-cta" id="ai-cta">
+        <div class="container ai-cta__inner">
+            <div class="ai-cta__content anim-fade-up">
+                <h2 class="ai-cta__title" data-i18n="aiPage.ctaTitle">The future of booking<br>starts with a message.
+                </h2>
+                <p class="ai-cta__subtitle" data-i18n="aiPage.ctaSubtitle">Whether you're a customer looking to book
+                    instantly, or a venue ready to
+                    automate — Karvon AI is your starting point.</p>
+                <div class="ai-cta__buttons">
+                    <a href="#" class="btn btn--accent btn--xl" onclick="openDownloadDialog(event)"
+                        data-i18n="aiPage.ctaButton1">Try Karvon AI →</a>
+                    <a href="#" class="btn btn--outline-light btn--xl" onclick="openPartnerDialog(event)"
+                        data-i18n="aiPage.ctaButton2">Get Karvon
+                        Host</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/translations.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

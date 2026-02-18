@@ -1,862 +1,598 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en">
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="facebook-domain-verification" content="xurl2zjg6abae7f9m1zj6bwhkozgkm" />
-  <meta charset="utf-8">
+  <title>Karvon — Book Services Instantly</title>
+  <meta name="description"
+    content="Karvon is an AI-powered booking platform for services. Book restaurants, gaming clubs, sports venues, beauty services and more — fast, without calls or waiting.">
   <meta name="keywords"
-    content="​AI Transforming Industries: Innovation in Healthcare, Education, Business, ​AI Revolution: Transforming Healthcare, Education, and Business with Innovative Solutions and Efficiency, ​Smart Solutions for Modern Businesses, Our team, ​Subscribe for latest updates &amp;amp; insights">
-  <meta name="description" content="">
-  <title>Home</title>
-  <link rel="stylesheet" href="nicepage.css" media="screen">
-  <link rel="stylesheet" href="index.css" media="screen">
-  <link rel="stylesheet" href="i18n.css" media="screen">
-  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="i18n.js" defer=""></script>
-  <script>
-    // Document ready event for language handling
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log('Language initialized:', localStorage.getItem('karvon-language') || 'en');
-    });
-  </script>
+    content="booking, services, restaurants, gaming clubs, sports venues, AI booking, Karvon, Uzbekistan">
 
-  <meta name="referrer" content="origin">
-
-
-
-
-
-
-
-
-
-
-
-
-  <link id="u-theme-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin,cyrillic,cyrillic-ext">
-  <link id="u-page-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Alexandria:100,200,300,400,500,600,700,800,900|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin,cyrillic,cyrillic-ext">
-  <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/logo512circle.png",
-		"sameAs": [
-				"https://t.me/karvonsupport_bot",
-				"https://www.instagram.com/karvon.labs/"
-		]
-}</script>
-  <meta name="theme-color" content="#73a3de">
-  <meta property="og:title" content="Home">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karvon — Book Services Instantly">
+  <meta property="og:description"
+    content="AI-powered booking platform for services. Search, compare, book, and pay — all in one place.">
+  <meta property="og:image" content="/assets/logos/Logo640.png">
+  <meta property="og:url" content="https://gokarvon.com">
   <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karvon — Book Services Instantly">
+  <meta name="twitter:description" content="AI-powered booking platform for services.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/logos/Logo512.png">
+  <link rel="apple-touch-icon" href="/assets/logos/Logo512.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
-<body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false"
-  class="u-body u-xl-mode" data-lang="en">
-  <header class="u-border-2 u-border-grey-75 u-clearfix u-custom-color-3 u-header u-header" id="sec-d1ce">
-    <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-sheet-1">
-      <a href="./" data-page-id="237528709" class="u-image u-logo u-image-1" data-image-width="512"
-        data-image-height="512" title="Home">
-        <img src="images/logo512circle.png" class="u-logo-image u-logo-image-1">
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo">
+        <img src="/assets/logos/Logo640.png" alt="Karvon Logo" width="40" height="40">
+        <span class="navbar__wordmark">Karvon</span>
       </a>
 
-      <!-- Language Dropdown -->
-      <div class="language-dropdown">
-        <button id="languageDropdownBtn" class="language-dropdown-btn">
-          <span class="current-lang">EN</span>
-          <span class="dropdown-icon">▼</span>
-        </button>
-        <div id="languageDropdownContent" class="language-dropdown-content">
-          <div data-lang="en" class="language-dropdown-item active">
-            <span class="language-flag">🇬🇧</span>
-            <span class="language-name" data-i18n="language.en">English</span>
-          </div>
-          <div data-lang="ru" class="language-dropdown-item">
-            <span class="language-flag">🇷🇺</span>
-            <span class="language-name" data-i18n="language.ru">Russian</span>
-          </div>
-          <div data-lang="uz" class="language-dropdown-item">
-            <span class="language-flag">🇺🇿</span>
-            <span class="language-name" data-i18n="language.uz">Uzbek</span>
-          </div>
-        </div>
+      <div class="navbar__links" id="navLinks">
+        <a href="#features" class="navbar__link" data-i18n="nav.features">Features</a>
+        <a href="#products" class="navbar__link" data-i18n="nav.products">Products</a>
+        <a href="#how-it-works" class="navbar__link" data-i18n="nav.howItWorks">How It Works</a>
+        <a href="/ai" class="navbar__link" data-i18n="nav.ai">Karvon AI</a>
       </div>
 
-      <div class="u-container-style u-custom-color-5 u-group u-radius u-shape-round u-group-1">
-        <div class="u-container-layout u-valign-middle u-container-layout-1">
-          <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-            <div class="menu-collapse u-custom-font u-font-montserrat"
-              style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
-              <a class="u-button-style u-custom-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-custom-color-6 u-text-hover-custom-color-5"
-                href="#">
-                <svg class="u-svg-link" viewBox="0 0 24 24">
-                  <use xlink:href="#menu-hamburger"></use>
-                </svg>
-                <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <rect y="1" width="16" height="2"></rect>
-                    <rect y="7" width="16" height="2"></rect>
-                    <rect y="13" width="16" height="2"></rect>
-                  </g>
-                </svg>
-              </a>
-            </div>
-            <div class="u-custom-menu u-nav-container">
-              <ul class="u-custom-font u-font-montserrat u-nav u-unstyled u-nav-1">
-                <li class="u-nav-item"><a
-                    class="u-button-style u-nav-link u-text-active-custom-color-6 u-text-custom-color-3 u-text-hover-custom-color-3"
-                    href="./" style="padding: 10px 20px;" data-i18n="nav.home">Home</a>
-                </li>
-                <li class="u-nav-item"><a
-                    class="u-button-style u-nav-link u-text-active-custom-color-6 u-text-custom-color-3 u-text-hover-custom-color-3"
-                    href="Apps.html" style="padding: 10px 20px;" data-i18n="nav.apps">Apps</a>
-                </li>
-                <li class="u-nav-item"><a
-                    class="u-button-style u-nav-link u-text-active-custom-color-6 u-text-custom-color-3 u-text-hover-custom-color-3"
-                    href="About.html" style="padding: 10px 20px;" data-i18n="nav.about">About</a>
-                </li>
-                <li class="u-nav-item"><a
-                    class="u-button-style u-nav-link u-text-active-custom-color-6 u-text-custom-color-3 u-text-hover-custom-color-3"
-                    href="https://help.host.gokarvon.com" style="padding: 10px 20px;" data-i18n="nav.help">Help</a>
-                </li>
-                <li class="u-nav-item language-selector">
-                  <div class="u-language-switcher" style="display: flex; gap: 5px; padding: 10px 0;">
-                    <button data-lang="en" class="u-button-style u-text-custom-color-3"
-                      style="padding: 5px 10px; border: none; cursor: pointer; background: none; font-weight: 700;">EN</button>
-                    <button data-lang="ru" class="u-button-style u-text-custom-color-3"
-                      style="padding: 5px 10px; border: none; cursor: pointer; background: none;">RU</button>
-                    <button data-lang="uz" class="u-button-style u-text-custom-color-3"
-                      style="padding: 5px 10px; border: none; cursor: pointer; background: none;">UZ</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="u-custom-menu u-nav-container-collapse">
-              <div class="u-container-style u-custom-color-5 u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                <div class="u-inner-container-layout u-sidenav-overflow">
-                  <div class="u-menu-close"></div>
-                  <ul
-                    class="u-align-center u-custom-font u-font-montserrat u-nav u-popupmenu-items u-text-custom-color-6 u-unstyled u-nav-2">
-                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./" data-i18n="nav.home">Home</a>
-                    </li>
-                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Apps.html"
-                        data-i18n="nav.apps">Apps</a>
-                    </li>
-                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html"
-                        data-i18n="nav.about">About</a>
-                    </li>
-                    <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                        href="https://help.host.gokarvon.com" data-i18n="nav.help">Help</a>
-                    </li>
-                    <li class="u-nav-item language-selector">
-                      <div class="u-language-switcher"
-                        style="display: flex; justify-content: center; margin-top: 15px; gap: 10px;">
-                        <button data-lang="en" class="u-button-style"
-                          style="padding: 5px 10px; border: none; cursor: pointer; background: none; font-weight: bold;">EN</button>
-                        <button data-lang="ru" class="u-button-style"
-                          style="padding: 5px 10px; border: none; cursor: pointer; background: none;">RU</button>
-                        <button data-lang="uz" class="u-button-style"
-                          style="padding: 5px 10px; border: none; cursor: pointer; background: none;">UZ</button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="u-custom-color-3 u-menu-overlay u-opacity u-opacity-70"></div>
-            </div>
-          </nav>
+      <div class="navbar__actions">
+        <div class="lang-switcher">
+          <button class="lang-switcher__btn active" data-lang="en" onclick="changeLanguage('en')">EN</button>
+          <button class="lang-switcher__btn" data-lang="ru" onclick="changeLanguage('ru')">RU</button>
+          <button class="lang-switcher__btn" data-lang="uz" onclick="changeLanguage('uz')">UZ</button>
         </div>
+        <a href="#" class="btn btn--secondary btn--sm" onclick="openDownloadDialog(event)"
+          data-i18n="nav.download">Download App</a>
+        <a href="#" class="btn btn--primary btn--sm" onclick="openPartnerDialog(event)" data-i18n="nav.business">For
+          Businesses</a>
       </div>
-      <h3 class="u-text u-text-custom-color-5 u-text-default u-text-1">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-custom-font u-font-montserrat u-hover-none u-none u-text-custom-color-5 u-btn-1"
-          href="./" data-page-id="237528709">Karvon</a>
-      </h3>
-    </div>
-  </header>
-  <section class="u-clearfix u-container-align-center-sm u-container-align-center-xs u-custom-color-5 u-section-1"
-    id="sec-aa63">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-col">
-            <div class="u-size-30">
-              <div class="u-layout-row">
-                <div class="u-container-style u-layout-cell u-size-41 u-layout-cell-1">
-                  <div class="u-container-layout u-valign-top u-container-layout-1">
-                    <h1 class="u-custom-font u-font-montserrat u-text u-text-custom-color-6 u-text-default u-text-1"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0"
-                      data-i18n="hero.title">
-                      Book Services Smarter, Man​​ge Businesses Better</h1>
-                  </div>
-                </div>
-                <div class="u-container-style u-layout-cell u-size-19 u-layout-cell-2">
-                  <div
-                    class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-2">
-                    <div
-                      class="u-align-center u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group-elements u-group-elements-1">
-                      <img class="u-expanded u-image u-image-round u-radius u-image-1"
-                        src="images/eddbad947b4c8699c41dd508c9a48e418c065f29b6b9db294ccbaa2faa4ab6074af81ebacb45b525861dbd13541252acd6372385cbccd658a31fa8_1280.jpg"
-                        alt="" data-image-width="1280" data-image-height="852">
-                      <div
-                        class="u-custom-color-6 u-expanded u-opacity u-opacity-45 u-radius u-shape u-shape-round u-shape-1">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-size-30">
-              <div class="u-layout-row">
-                <div class="u-container-style u-layout-cell u-size-21 u-layout-cell-3">
-                  <div class="u-container-layout u-valign-middle-xs u-container-layout-3">
-                    <div
-                      class="custom-expanded data-layout-selected u-align-center u-clearfix u-layout-wrap u-layout-wrap-2">
-                      <div class="u-layout">
-                        <div class="u-layout-col">
-                          <div
-                            class="u-container-align-center-xs u-container-style u-layout-cell u-size-30 u-layout-cell-4">
-                            <div class="u-container-layout u-valign-middle u-container-layout-4">
-                              <a href="Apps.html" data-page-id="2744111843"
-                                class="u-align-center-xs u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-1"
-                                data-i18n="buttons.forUsers">FOR
-                                USERS </a>
-                            </div>
-                          </div>
-                          <div class="u-container-style u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-5">
-                            <div class="u-container-layout u-valign-middle u-container-layout-5">
-                              <a href="Apps.html" data-page-id="2744111843"
-                                class="u-align-center u-btn u-button-style u-custom-color-3 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-2"
-                                data-i18n="buttons.forBusinesses">FOR
-                                BUSINESSES </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="u-container-align-left u-container-style u-custom-color-3 u-layout-cell u-radius u-shape-round u-size-39 u-layout-cell-6">
-                  <div class="u-container-layout u-valign-middle u-container-layout-6">
-                    <p class="u-align-left u-custom-font u-font-montserrat u-text u-text-custom-color-7 u-text-default u-text-2"
-                      data-i18n="hero.description">
-                      Karvon empowers clients to find and book services with ease, while giving businesses the tools to
-                      manage bookings, attract new clients, and grow effortlessly. From car rentals to sports venues and
-                      medical services, Karvon​ connects you to convenience and success. Start your journey with Karvon
-                      today.</p>
-                    <a href="Apps.html" data-page-id="2744111843"
-                      class="u-align-left u-border-none u-btn u-button-style u-custom-color-5 u-custom-font u-font-montserrat u-hover-custom-color-5 u-text-custom-color-6 u-text-hover-custom-color-6 u-btn-3"
-                      data-i18n="hero.discover">discover
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-container-align-center u-custom-color-3 u-section-2" id="sec-383c">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="skrollable u-container-style u-layout-cell u-parallax u-radius u-size-20 u-layout-cell-1">
-              <div class="u-container-layout u-valign-middle u-container-layout-1">
-                <img class="u-hidden-sm u-hidden-xs u-image u-image-contain u-image-default u-image-1"
-                  src="images/9.png" alt="" data-image-width="720" data-image-height="1280">
-                <img class="u-image u-image-default u-image-2" src="images/1.png" alt="" data-image-width="720"
-                  data-image-height="1280">
-              </div>
-            </div>
-            <div
-              class="u-align-right u-container-align-center-xs u-container-align-right u-container-style u-layout-cell u-size-40 u-layout-cell-2">
-              <div class="u-container-layout u-valign-bottom u-container-layout-2">
-                <h2 class="u-align-right u-custom-font u-font-montserrat u-text u-text-default u-text-1"
-                  data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0"
-                  data-i18n="sections.clients.title">Karvon For Clients: Effortless Booking, Tailored for You
-                </h2>
-                <p class="u-align-right u-text u-text-2" data-i18n="sections.clients.description"> Find services that
-                  fit your needs in just a few clicks. Karvon
-                  simplifies your booking process, saving time and effort. Compare multiple businesses, view pricing
-                  upfront, and secure your spot instantly — all in one place.</p>
-                <a href="Apps.html" data-page-id="2744111843"
-                  class="u-align-center-xs u-btn u-button-style u-custom-color-5 u-custom-font u-font-montserrat u-text-custom-color-6 u-btn-1"
-                  data-i18n="buttons.forClients">FOR
-                  CLIENTS </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-container-align-center u-custom-color-5 u-section-3" id="carousel_122c">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-40 u-layout-cell-1">
-              <div class="u-container-layout u-valign-top u-container-layout-1">
-                <h2
-                  class="u-align-left u-custom-font u-font-montserrat u-text u-text-custom-color-3 u-text-default u-text-1"
-                  data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0"
-                  data-i18n="sections.partners.title">Karvon For Partners: Grow Your Business with Karvon
-                </h2>
-                <p class="u-align-left u-text u-text-custom-color-3 u-text-2" data-i18n="sections.partners.description">
-                  From managing bookings to attracting new
-                  clients, Karvon provides powerful tools for businesses. Whether you're a car rental company or a
-                  sports venue, streamline your operations and connect with more customers using our intuitive apps.
-                </p>
-                <a href="Apps.html" data-page-id="2744111843"
-                  class="u-align-center-xs u-btn u-button-style u-custom-color-3 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-1"
-                  data-i18n="buttons.forPartners">FOR
-                  PARTNERS </a>
-              </div>
-            </div>
-            <div class="skrollable u-container-style u-layout-cell u-parallax u-radius u-size-20 u-layout-cell-2">
-              <div class="u-container-layout u-container-layout-2">
-                <div class="u-rotation-parent u-rotation-parent-1">
-                  <img class="u-hidden-md u-hidden-sm u-hidden-xs u-image u-image-contain u-image-default u-image-1"
-                    src="images/8.png" alt="" data-image-width="720" data-image-height="1280">
-                </div>
-                <img class="u-align-center-md u-align-center-sm u-align-center-xs u-image u-image-default u-image-2"
-                  src="images/5.png" alt="" data-image-width="720" data-image-height="1280">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-container-align-center u-custom-color-11 u-section-4" id="carousel_d934">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-gutter-0 u-layout">
-          <div class="u-layout-col">
-            <div class="u-size-30">
-              <div class="u-layout-row">
-                <div
-                  class="u-container-align-center-lg u-container-align-center-xl u-container-style u-layout-cell u-size-40 u-layout-cell-1">
-                  <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl u-container-layout-1">
-                    <div
-                      class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-custom-color-8 u-expanded-width-lg u-expanded-width-xl u-expanded-width-xs u-group u-radius u-shape-round u-group-1"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000">
-                      <div class="u-container-layout u-container-layout-2">
-                        <h2
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-heading-font u-text u-text-custom-color-11 u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-1"
-                          data-i18n="sections.categories.title">
-                          Many Categories and Services</h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="u-container-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-2">
-                  <div class="u-container-layout u-valign-top u-container-layout-3">
-                    <div
-                      class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-expanded-width u-group u-palette-4-light-1 u-radius u-shape-round u-group-2"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000">
-                      <div class="u-container-layout u-valign-middle u-container-layout-4">
-                        <span
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-file-icon u-icon u-icon-circle u-text-custom-color-5 u-white u-icon-1">
-                          <img src="images/1198416-abf24fc5.png" alt="">
-                        </span>
-                        <h5
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-heading-font u-text u-text-custom-color-9 u-text-default u-text-2"
-                          data-i18n="sections.categories.sports.title">
-                          Sports</h5>
-                        <p class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-text u-text-custom-color-10 u-text-default u-text-3"
-                          data-i18n="sections.categories.sports.description">
-                          Rent sports locations an<span style="font-weight: 700;">
-                            <span style="font-weight: 600;">
-                              <span style="font-weight: 600;"></span>
-                            </span>
-                          </span>d venues
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-size-30">
-              <div class="u-layout-row">
-                <div class="u-container-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
-                  <div class="u-container-layout u-container-layout-5">
-                    <div
-                      class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-custom-color-6 u-expanded-width-lg u-expanded-width-xl u-group u-radius u-shape-round u-group-3"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000">
-                      <div class="u-container-layout u-valign-middle u-container-layout-6">
-                        <span
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-file-icon u-icon u-icon-circle u-text-custom-color-10 u-white u-icon-2">
-                          <img src="images/2736918-e93c2d83.png" alt="">
-                        </span>
-                        <h5
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-heading-font u-text u-text-custom-color-10 u-text-default u-text-4"
-                          data-i18n="sections.categories.carRental.title">
-                          Car Rental</h5>
-                        <p class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-text u-text-custom-color-10 u-text-default u-text-5"
-                          data-i18n="sections.categories.carRental.description">
-                          Rent many car from different brands and types</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="u-container-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-4">
-                  <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl u-container-layout-7">
-                    <div
-                      class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-custom-color-3 u-expanded-width-lg u-expanded-width-xl u-group u-radius u-shape-round u-group-4"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000">
-                      <div class="u-container-layout u-valign-middle u-container-layout-8">
-                        <span
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-color-10 u-file-icon u-icon u-icon-circle u-text-palette-3-base u-icon-3">
-                          <img src="images/3137790-b485978a.png" alt="">
-                        </span>
-                        <h5
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-heading-font u-text u-text-custom-color-10 u-text-default u-text-6"
-                          data-i18n="sections.categories.beauty.title">
-                          Beauty </h5>
-                        <p class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-text u-text-custom-color-10 u-text-default u-text-7"
-                          data-i18n="sections.categories.beauty.description">
-                          Barbershops and other beauty services </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="u-container-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-5">
-                  <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-xl u-container-layout-9">
-                    <div
-                      class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-expanded-width-lg u-expanded-width-xl u-group u-palette-1-light-1 u-radius u-shape-round u-group-5"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000">
-                      <div class="u-container-layout u-valign-middle u-container-layout-10">
-                        <span
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-file-icon u-icon u-icon-circle u-text-custom-color-10 u-white u-icon-4">
-                          <img src="images/2902055-b7109085.png" alt="">
-                        </span>
-                        <h5
-                          class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-heading-font u-text u-text-custom-color-10 u-text-default u-text-8"
-                          data-i18n="sections.categories.health.title">
-                          Health</h5>
-                        <p class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-text u-text-custom-color-10 u-text-default u-text-9"
-                          data-i18n="sections.categories.health.description">
-                          Medical services in multiple hospitals</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-custom-color-5 u-section-5" id="sec-f3a8">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-col">
-            <div class="u-size-60">
-              <div class="u-layout-row">
-                <div class="u-container-style u-custom-color-5 u-layout-cell u-size-30 u-layout-cell-1">
-                  <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-xl u-container-layout-1">
-                    <h4
-                      class="u-align-left u-custom-font u-font-montserrat u-text u-text-custom-color-3 u-text-default u-text-1"
-                      data-i18n="sections.comparison.withKarvon.title">
-                      With <span class="u-text-custom-color-6">Karvon</span>
-                    </h4>
-                    <p class="u-align-left u-text u-text-custom-color-3 u-text-2"
-                      data-i18n="sections.comparison.withKarvon.description"> The entire process can be completed
-                      in just a few clicks, hassle-free and worry-free</p>
-                  </div>
-                </div>
-                <div class="u-container-style u-custom-color-5 u-layout-cell u-size-30 u-layout-cell-2">
-                  <div class="u-container-layout u-valign-middle u-container-layout-2">
-                    <img class="u-expanded-width u-image u-image-default u-image-1"
-                      src="images/Screenshot2024-12-26at19.12.47.png" alt="" data-image-width="1408"
-                      data-image-height="664">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-custom-color-3 u-section-6" id="sec-6257">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-col">
-            <div class="u-size-60">
-              <div class="u-layout-row">
-                <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                  <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-xl u-container-layout-1">
-                    <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1"
-                      data-i18n="sections.comparison.typically.title">Typically</h4>
-                    <p class="u-text u-text-2" data-i18n="sections.comparison.typically.description"> You spend a lot of
-                      time and money. You have ​to contact several people
-                      and fill out numerous documents.</p>
-                  </div>
-                </div>
-                <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                  <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-container-layout-2">
-                    <img
-                      class="custom-expanded u-expanded-width-md u-expanded-width-sm u-image u-image-default u-image-1"
-                      src="images/Screenshot2024-12-26at19.12.39.png" alt="" data-image-width="1392"
-                      data-image-height="664">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-custom-color-3 u-section-7" id="sec-bc9d">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-col">
-            <div
-              class="u-container-style u-custom-color-11 u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-1">
-              <div class="u-container-layout u-valign-top-xs u-container-layout-1">
-                <div class="custom-expanded data-layout-selected u-clearfix u-gutter-18 u-layout-wrap u-layout-wrap-2">
-                  <div class="u-gutter-0 u-layout">
-                    <div class="u-layout-row">
-                      <div class="u-size-30 u-size-60-md">
-                        <div class="u-layout-row">
-                          <div
-                            class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-2"
-                            src="">
-                            <div
-                              class="u-container-layout u-valign-middle-xs u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-2"
-                              src="">
-                              <img class="custom-expanded u-image u-image-1" src="images/2.png" data-image-width="720"
-                                data-image-height="1280">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="u-size-30 u-size-60-md">
-                        <div class="u-layout-col">
-                          <div
-                            class="u-align-left u-container-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-3">
-                            <div
-                              class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-3"
-                              src="">
-                              <img class="custom-expanded u-image u-image-contain u-image-2"
-                                src="images/logo512circle.png" data-image-width="512" data-image-height="512">
-                            </div>
-                          </div>
-                          <div
-                            class="u-align-left u-container-align-left u-container-style u-custom-color-3 u-layout-cell u-radius u-right-cell u-shape-round u-size-20 u-layout-cell-4"
-                            src="">
-                            <div class="u-container-layout u-valign-top u-container-layout-4">
-                              <h2 class="u-align-right u-text u-text-custom-color-11 u-text-default u-text-1"
-                                data-i18n="sections.apps.client.title">
-                                Karv​​​​o​n<br>App for clients
-                              </h2>
-                              <a href="https://play.google.com/store/apps/details?id=com.karvon"
-                                class="u-align-center u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-1"
-                                target="_blank">google play </a>
-                              <a href="https://apps.apple.com/us/app/karvon/id6478936482"
-                                class="u-align-center u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-2"
-                                target="_blank" data-i18n="buttons.appStore">APP STORE </a>
-                              <a href="https://app.gokarvon.com/"
-                                class="u-align-center u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-3"
-                                target="_blank" data-i18n="buttons.webApp">WEB APP</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="u-container-style u-custom-color-8 u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-5">
-              <div class="u-container-layout u-container-layout-5">
-                <div
-                  class="custom-expanded data-layout-selected u-clearfix u-expanded-width-md u-expanded-width-sm u-gutter-18 u-layout-wrap u-layout-wrap-3">
-                  <div class="u-gutter-0 u-layout">
-                    <div class="u-layout-row">
-                      <div class="u-size-30 u-size-60-md">
-                        <div class="u-layout-row">
-                          <div
-                            class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-60 u-image-3"
-                            src="" data-image-width="720" data-image-height="1280">
-                            <div class="u-container-layout u-valign-middle u-container-layout-6" src=""></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="u-size-30 u-size-60-md">
-                        <div class="u-layout-col">
-                          <div
-                            class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-right-cell u-size-40 u-image-4"
-                            data-image-width="512" data-image-height="512">
-                            <div class="u-container-layout u-valign-middle u-container-layout-7" src=""></div>
-                          </div>
-                          <div
-                            class="u-align-left u-container-align-left u-container-style u-custom-color-5 u-layout-cell u-radius u-right-cell u-shape-round u-size-20 u-layout-cell-8"
-                            src="">
-                            <div class="u-container-layout u-valign-bottom u-container-layout-8">
-                              <h2 class="u-align-right u-text u-text-custom-color-3 u-text-default u-text-2"
-                                data-i18n="sections.apps.host.title">Karv​​​​on
-                                Host<br>App for Partners
-                              </h2>
-                              <a href="https://play.google.com/store/apps/details?id=com.karvon.host"
-                                class="u-align-center u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-4"
-                                target="_blank">google play </a>
-                              <a href="https://apps.apple.com/us/app/karvon-host/id6739776735"
-                                class="u-align-center u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-5"
-                                target="_blank" data-i18n="buttons.appStore">APP STORE </a>
-                              <a href="https://host.gokarvon.com/"
-                                class="u-align-center u-btn u-button-style u-custom-color-6 u-custom-font u-font-montserrat u-text-custom-color-5 u-btn-6"
-                                target="_blank" data-i18n="buttons.webApp">WEB APP</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    class="u-clearfix u-custom-color-3 u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-section-8"
-    id="sec-a389">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="u-size-15-lg u-size-15-xl u-size-19-sm u-size-19-xs u-size-30-md">
-              <div class="u-layout-col">
-                <div
-                  class="skrollable u-container-style u-image u-image-round u-layout-cell u-parallax u-radius u-shading u-size-60 u-image-1"
-                  data-image-width="2000" data-image-height="1333">
-                  <div
-                    class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-container-layout-1">
-                    <h3 class="u-custom-font u-font-montserrat u-text u-text-custom-color-3 u-text-default u-text-1"
-                      data-i18n="sections.benefits.find.title">
-                      Find and Book Services</h3>
-                    <p class="u-text u-text-custom-color-3 u-text-2" data-i18n="sections.benefits.find.description">
-                      Search for services, compare options, and book
-                      instantly with just a few clicks.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-size-21-sm u-size-21-xs u-size-27-lg u-size-27-md u-size-27-xl">
-              <div class="u-layout-col">
-                <div
-                  class="skrollable u-container-style u-gradient u-image u-image-round u-layout-cell u-parallax u-radius u-size-60 u-image-2"
-                  data-image-width="1333" data-image-height="2000">
-                  <div class="u-container-layout u-container-layout-2">
-                    <h3 class="u-custom-font u-font-montserrat u-text u-text-default u-text-3"
-                      data-i18n="sections.benefits.manage.title">Manage Bookings with Ease Promote Your Business
-                    </h3>
-                    <p class="u-text u-text-4" data-i18n="sections.benefits.manage.description"> Track and manage all
-                      your boo<span style="font-weight: 600;">
-                        <span style="font-weight: 600;"></span>
-                      </span>kings effortlessly in one convenient platform. Showcase your services to a wider audience
-                      and attract new clients seamlessly.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-size-18-lg u-size-18-xl u-size-19-sm u-size-19-xs u-size-60-md">
-              <div class="u-layout-col">
-                <div
-                  class="skrollable u-container-style u-gradient u-image u-image-round u-layout-cell u-parallax u-radius u-size-30 u-image-3"
-                  data-image-width="1280" data-image-height="853">
-                  <div class="u-container-layout u-container-layout-3">
-                    <h3 class="u-align-left u-custom-font u-font-montserrat u-text u-text-default u-text-5"
-                      data-i18n="sections.benefits.convenience.title"> All-in-One
-                      Convenience</h3>
-                  </div>
-                </div>
-                <div
-                  class="u-container-align-center-xs u-container-style u-custom-color-5 u-layout-cell u-radius u-shape-round u-size-30 u-layout-cell-4">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-4">
-                    <h3
-                      class="u-align-right u-custom-font u-heading-font u-text u-text-custom-color-3 u-text-default u-text-6"
-                      data-i18n="sections.benefits.simplified.title">
-                      Simplified Booking Experience</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="skrollable u-clearfix u-container-align-center u-custom-color-3 u-section-9" id="carousel_a993"
-    data-image-width="2000" data-image-height="1333">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div
-        class="skrollable u-container-style u-expanded-width u-gradient u-group u-image u-image-round u-parallax u-radius u-shape-rectangle u-image-1"
-        data-image-width="1280" data-image-height="853">
-        <div class="u-container-layout u-container-layout-1">
-          <h1 class="u-text u-text-custom-color-3 u-text-1" data-i18n="sections.platform.title">A Platform for Every
-            Need
-          </h1>
-          <p class="u-text u-text-custom-color-3 u-text-2" data-i18n="sections.platform.description"> From car rentals
-            and sports venues to beauty and medical
-            services, Karvon connects clients with businesses across diverse industries, making booking simple and
-            stress-free.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-clearfix u-container-align-center-sm u-container-align-center-xs u-custom-color-3 u-section-10"
-    id="sec-e745">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="custom-expanded data-layout-selected u-clearfix u-gutter-26 u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-col">
-            <div class="u-size-30">
-              <div class="u-layout-row">
-                <div
-                  class="u-container-align-center-sm u-container-align-center-xs u-container-style u-layout-cell u-size-45 u-layout-cell-1">
-                  <div class="u-container-layout u-valign-top u-container-layout-1">
-                    <h1 class="u-align-center-sm u-align-center-xs u-text u-text-default u-text-1"
-                      data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0"
-                      data-i18n="sections.contacts.title">
-                      Our contacts </h1>
-                    <div class="u-expanded-width-lg u-expanded-width-xl u-expanded-width-xs u-form u-form-1">
-                      <form action="https://forms.nicepagesrv.com/v2/form/process"
-                        class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" source="email" name="form"
-                        style="padding: 0px;">
-                        <div class="u-form-group u-form-name u-label-none">
-                          <label for="name-c488" class="u-label" data-i18n="sections.contacts.form.name">Name</label>
-                          <input type="text" placeholder="Enter your Name" id="name-c488" name="name"
-                            class="u-border-none u-custom-color-8 u-input u-input-rectangle u-radius u-input-1"
-                            required="" data-i18n-placeholder="sections.contacts.form.namePlaceholder">
-                        </div>
-                        <div class="u-form-email u-form-group u-label-none">
-                          <label for="email-c488" class="u-label" data-i18n="sections.contacts.form.email">Email</label>
-                          <input type="email" placeholder="Enter a valid email address" id="email-c488" name="email"
-                            class="u-border-none u-custom-color-8 u-input u-input-rectangle u-radius u-input-2"
-                            required="" data-i18n-placeholder="sections.contacts.form.emailPlaceholder">
-                        </div>
-                        <div class="u-form-group u-form-message u-label-none">
-                          <label for="message-c488" class="u-label"
-                            data-i18n="sections.contacts.form.message">Message</label>
-                          <textarea placeholder="Enter your message" rows="4" cols="50" id="message-c488" name="message"
-                            class="u-border-none u-custom-color-8 u-input u-input-rectangle u-radius u-input-3"
-                            required="" data-i18n-placeholder="sections.contacts.form.messagePlaceholder"></textarea>
-                        </div>
-                        <div class="u-align-left u-form-group u-form-submit u-label-none">
-                          <a href="#" class="u-btn u-btn-submit u-button-style" data-i18n="buttons.submit">Submit</a>
-                          <input type="submit" value="submit" class="u-form-control-hidden">
-                        </div>
-                        <div class="u-form-send-message u-form-send-success" data-i18n="sections.contacts.form.success">
-                          Thank you! Your message has been sent.
-                        </div>
-                        <div class="u-form-send-error u-form-send-message" data-i18n="sections.contacts.form.error">
-                          Unable to send your message. Please fix
-                          errors then try again. </div>
-                        <input type="hidden" value="" name="recaptchaResponse">
-                        <input type="hidden" name="formServices" value="e577efac-7af1-5128-c5e1-bc9b0e76b2ff">
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="u-container-align-center-sm u-container-align-center-xs u-container-style u-hidden-xs u-image u-image-round u-layout-cell u-radius u-size-15 u-image-1"
-                  data-image-width="2000" data-image-height="1333">
-                  <div class="u-container-layout u-container-layout-2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="u-size-30">
-              <div class="u-layout-row">
-                <div
-                  class="u-container-align-center-xs u-container-style u-custom-color-5 u-layout-cell u-radius u-shape-round u-size-60 u-layout-cell-3">
-                  <div class="u-container-layout u-container-layout-3">
-                    <h4 class="u-align-center-xs u-text u-text-2" data-i18n="sections.contacts.company">Karvon Labs and
-                      Tech </h4>
-                    <p class="u-align-center-xs u-text u-text-default u-text-3" data-i18n="sections.contacts.address">20
-                      Begoyim Street, Tashkent, Uzbekistan,
-                      100178</p>
-                    <p class="u-align-center-xs u-text u-text-default u-text-4" data-i18n="sections.contacts.email">
-                      help@gokarvon.com<br>host@gokarvon.com
-                    </p>
-                    <h6 class="u-align-center-xs u-text u-text-default u-text-5" data-i18n="sections.contacts.phone">+
-                      998 33 939 7777<br>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+    <a href="#features" class="mobile-menu__link" data-i18n="nav.features">Features</a>
+    <a href="#products" class="mobile-menu__link" data-i18n="nav.products">Products</a>
+    <a href="#how-it-works" class="mobile-menu__link" data-i18n="nav.howItWorks">How It Works</a>
+    <a href="/ai" class="mobile-menu__link" data-i18n="nav.ai">Karvon AI</a>
+    <div class="mobile-menu__actions">
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn active" data-lang="en" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-switcher__btn" data-lang="ru" onclick="changeLanguage('ru')">RU</button>
+        <button class="lang-switcher__btn" data-lang="uz" onclick="changeLanguage('uz')">UZ</button>
+      </div>
+      <a href="#" class="btn btn--secondary" onclick="openDownloadDialog(event)" data-i18n="nav.download">Download
+        App</a>
+      <a href="#" class="btn btn--primary" onclick="openPartnerDialog(event)" data-i18n="nav.business">For
+        Businesses</a>
+    </div>
+  </div>
 
-  <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-custom-color-5 u-footer"
-    id="sec-73e3">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <a href="#" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="512" data-image-height="512">
-        <img src="images/labsLogo512NoBg.png" class="u-logo-image u-logo-image-1">
-      </a>
-      <h3
-        class="u-align-center-xs u-custom-font u-font-montserrat u-headline u-text u-text-custom-color-6 u-text-default u-text-1"
-        data-i18n="footer.title">
-        <a href="/">Karvon Labs</a>
-      </h3>
-      <p class="u-align-center-lg u-align-center-md u-align-center-xl u-align-center-xs u-custom-font u-font-montserrat u-text u-text-custom-color-6 u-text-2"
-        data-i18n="footer.copyright">
-        © 2025 Karvon Labs and Tech MCHJ&nbsp;</p>
-      <div class="u-align-left u-hidden-xs u-social-icons u-spacing-10 u-social-icons-1">
-        <a class="u-social-url" title="telegram" target="_blank" href="https://t.me/karvonsupport_bot">
-          <span class="u-file-icon u-icon u-social-facebook u-social-icon u-icon-1">
-            <img src="images/1604538.png" alt="">
-          </span>
-        </a>
-        <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/karvon.labs/">
-          <span class="u-icon u-social-icon u-social-instagram u-text-custom-color-6">
-            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
-              <use xlink:href="#svg-e23e"></use>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-shapes">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+    </div>
+    <div class="container hero__inner">
+      <div class="hero__content anim-fade-up">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          <span data-i18n="hero.badge">AI-Powered Booking Platform</span>
+        </div>
+        <h1 class="hero__title" data-i18n="hero.title">
+          Book services<br>
+          <span class="hero__title--accent">instantly.</span>
+          <span class="hero__title--sub">No calls, no waiting.</span>
+        </h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Discover and book restaurants, gaming clubs, sports venues, beauty services, and more — all in one app. For
+          businesses, manage everything from one dashboard.
+        </p>
+        <div class="hero__cta">
+          <a href="#" class="btn btn--primary btn--lg" onclick="openDownloadDialog(event)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7" />
             </svg>
-            <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-e23e">
-              <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
-              <path fill="#FFFFFF"
-                d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
-      z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path>
-              <path fill="#FFFFFF"
-                d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path>
-              <path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
-      C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
-      c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
-            </svg>
-          </span>
-        </a>
+            <span data-i18n="hero.getApp">Get the App</span>
+          </a>
+          <a href="#" class="btn btn--outline btn--lg" onclick="openPartnerDialog(event)" data-i18n="hero.imBusiness">
+            I'm a Business →
+          </a>
+        </div>
+        <div class="hero__badges">
+          <div class="hero__trust-badge">
+            <img class="hero__trust-logo" src="/assets/logos/amazon_logo.jpg" alt="Amazon" width="24" height="24">
+            <span data-i18n="hero.amazon">Built by ex-<strong>Amazon</strong> engineers</span>
+          </div>
+          <div class="hero__trust-badge">
+            <img class="hero__trust-logo" src="/assets/logos/poytaxt_bank.webp" alt="Poytaxt Bank" width="24"
+              height="24">
+            <span data-i18n="hero.poytaxt">Supported by <strong>Poytaxt Bank</strong> executives</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual anim-fade-up" style="--delay: 0.2s">
+        <div class="hero__phone-wrapper">
+          <div class="hero__phone-glow"></div>
+          <img src="/assets/mockups/home-screen.png" alt="Karvon App - Home Screen" class="hero__phone" loading="eager">
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- ===== TRACTION BAR ===== -->
+  <section class="traction" id="traction">
+    <div class="container">
+      <div class="traction__grid">
+        <div class="traction__item anim-fade-up">
+          <span class="traction__number" data-target="50">0</span><span class="traction__plus">+</span>
+          <span class="traction__label" data-i18n="traction.partners">Partners</span>
+        </div>
+        <div class="traction__divider"></div>
+        <div class="traction__item anim-fade-up" style="--delay: 0.1s">
+          <span class="traction__number" data-target="500">0</span><span class="traction__plus">+</span>
+          <span class="traction__label" data-i18n="traction.users">Monthly Users</span>
+        </div>
+        <div class="traction__divider"></div>
+        <div class="traction__item anim-fade-up" style="--delay: 0.2s">
+          <span class="traction__number" data-target="3">0</span>
+          <span class="traction__label" data-i18n="traction.cities">Active Cities</span>
+        </div>
+        <div class="traction__divider"></div>
+        <div class="traction__item anim-fade-up" style="--delay: 0.3s">
+          <span class="traction__number" data-target="12">0</span>
+          <span class="traction__label" data-i18n="traction.categories">Service Categories</span>
+        </div>
+        <div class="traction__divider"></div>
+        <div class="traction__item anim-fade-up" style="--delay: 0.4s">
+          <span class="traction__number" data-target="70">0</span><span class="traction__plus">%</span>
+          <span class="traction__label" data-i18n="traction.faster">Faster Bookings</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KARVON AI ===== -->
+  <section class="ai-section" id="karvon-ai">
+    <div class="container">
+      <div class="ai-section__inner">
+        <div class="ai-section__content anim-fade-up">
+          <span class="section-tag section-tag--light" data-i18n="aiSection.tag">Karvon AI</span>
+          <h2 class="ai-section__title" data-i18n="aiSection.title">The AI booking layer<br>for services.</h2>
+          <p class="ai-section__subtitle" data-i18n="aiSection.subtitle">A chat-first booking agent that lets customers
+            find, ask questions, and
+            <strong>complete real bookings inside a conversation</strong>. For venues — a ready-to-deploy AI assistant
+            that handles bookings 24/7.
+          </p>
+          <div class="ai-section__features">
+            <div class="ai-feature">
+              <div class="ai-feature__icon">💬</div>
+              <div data-i18n="aiSection.chatNative">
+                <strong>Chat-native booking</strong>
+                <p>Customers text what they want — AI books it. No forms, no calls.</p>
+              </div>
+            </div>
+            <div class="ai-feature">
+              <div class="ai-feature__icon">🤖</div>
+              <div data-i18n="aiSection.aiToAi">
+                <strong>AI-to-AI bookings</strong>
+                <p>As personal AI assistants grow, they'll book through Karvon AI — the universal booking endpoint.</p>
+              </div>
+            </div>
+          </div>
+          <a href="/ai" class="btn btn--accent btn--lg" data-i18n="aiSection.learnMore">Learn More About Karvon AI →</a>
+        </div>
+        <div class="ai-section__visual anim-fade-up" style="--delay: 0.2s">
+          <img src="/assets/mockups/ai-chat.png" alt="Karvon AI Chat" class="ai-section__mockup" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-tag" data-i18n="howItWorks.tag">How It Works</span>
+        <h2 class="section-title" data-i18n="howItWorks.title">Book in 3 simple steps</h2>
+        <p class="section-subtitle" data-i18n="howItWorks.subtitle">From discovery to confirmation in under a minute</p>
+      </div>
+      <div class="steps">
+        <div class="step anim-fade-up">
+          <div class="step__number">1</div>
+          <div class="step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </div>
+          <h3 class="step__title" data-i18n="howItWorks.step1Title">Search & Discover</h3>
+          <p class="step__desc" data-i18n="howItWorks.step1Desc">Browse restaurants, gaming clubs, sports venues, beauty
+            services and more. Filter by
+            category, location, or availability.</p>
+        </div>
+        <div class="step__connector anim-fade-up"></div>
+        <div class="step anim-fade-up" style="--delay: 0.15s">
+          <div class="step__number">2</div>
+          <div class="step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4" />
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+            </svg>
+          </div>
+          <h3 class="step__title" data-i18n="howItWorks.step2Title">Compare & Choose</h3>
+          <p class="step__desc" data-i18n="howItWorks.step2Desc">See prices, reviews, photos, and real-time
+            availability. Pick the perfect spot with all
+            the details upfront.</p>
+        </div>
+        <div class="step__connector anim-fade-up"></div>
+        <div class="step anim-fade-up" style="--delay: 0.3s">
+          <div class="step__number">3</div>
+          <div class="step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <path d="M22 4 12 14.01l-3-3" />
+            </svg>
+          </div>
+          <h3 class="step__title" data-i18n="howItWorks.step3Title">Book & Go</h3>
+          <p class="step__desc" data-i18n="howItWorks.step3Desc">Confirm your booking instantly. Get a QR code, clear
+            details, and show up — no calls, no
+            back-and-forth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOR CUSTOMERS ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features__split">
+        <div class="features__content anim-fade-up">
+          <span class="section-tag" data-i18n="features.tag">For Customers</span>
+          <h2 class="section-title" data-i18n="features.title">One app for all<br>your bookings</h2>
+          <p class="section-subtitle" data-i18n="features.subtitle">Stop calling, DMing, and waiting. Book any service
+            in seconds.</p>
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="features.item1Title">Many categories, one app</strong>
+                <span data-i18n="features.item1Desc">Restaurants, gaming, sports, beauty, entertainment & more</span>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="features.item2Title">Instant booking</strong>
+                <span data-i18n="features.item2Desc">No calls, no waiting — confirm in seconds</span>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="features.item3Title">AI-powered chat booking</strong>
+                <span data-i18n="features.item3Desc">Just text what you want — Karvon AI handles the rest</span>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="features.item4Title">Trust & clarity</strong>
+                <span data-i18n="features.item4Desc">Structured details, clear pricing, instant confirmations</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="features__visual anim-fade-up" style="--delay: 0.2s">
+          <div class="features__phone-wrapper">
+            <img src="/assets/mockups/search.png" alt="Karvon Search Screen" class="features__phone" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOR BUSINESSES ===== -->
+  <section class="for-business" id="for-businesses">
+    <div class="container">
+      <div class="features__split features__split--reverse">
+        <div class="features__content anim-fade-up">
+          <span class="section-tag section-tag--dark" data-i18n="business.tag">For Businesses</span>
+          <h2 class="section-title" data-i18n="business.title">Your entire booking<br>operation in one place</h2>
+          <p class="section-subtitle" data-i18n="business.subtitle">Karvon Host replaces spreadsheets, chat-based
+            bookings, and manual follow-ups with
+            a single intelligent system.</p>
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__item-icon features__item-icon--alt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="business.item1Title">Booking & operations center</strong>
+                <span data-i18n="business.item1Desc">Manage schedules, prevent double bookings, accept/decline in one
+                  click</span>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__item-icon features__item-icon--alt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="business.item2Title">Customer database</strong>
+                <span data-i18n="business.item2Desc">Unified profiles, history, VIP tags, and cancellation
+                  tracking</span>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__item-icon features__item-icon--alt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="business.item3Title">AI Sales Agent (24/7)</strong>
+                <span data-i18n="business.item3Desc">Handles inquiries and bookings in Telegram & Instagram
+                  automatically</span>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__item-icon features__item-icon--alt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <div>
+                <strong data-i18n="business.item4Title">Marketing + Analytics</strong>
+                <span data-i18n="business.item4Desc">Biocards, QR codes, Telegram integration, and actionable
+                  insights</span>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="btn btn--primary" style="margin-top: 1rem;" onclick="openPartnerDialog(event)"
+            data-i18n="business.cta">Start with
+            Karvon Host →</a>
+        </div>
+        <div class="features__visual anim-fade-up" style="--delay: 0.2s">
+          <div class="features__laptop-wrapper">
+            <img src="/assets/mockups/host-dashboard-angled.png" alt="Karvon Host Dashboard" class="features__laptop"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-tag" data-i18n="products.tag">Our Products</span>
+        <h2 class="section-title" data-i18n="products.title">The Karvon ecosystem</h2>
+        <p class="section-subtitle" data-i18n="products.subtitle">A complete platform connecting customers and
+          businesses</p>
+      </div>
+      <div class="products__grid">
+        <div class="product-card anim-fade-up">
+          <div class="product-card__icon">
+            <img src="/assets/logos/Logo512_2.png" alt="Karvon" width="56" height="56">
+          </div>
+          <h3 class="product-card__title" data-i18n="products.clientAppTitle">Karvon</h3>
+          <p class="product-card__subtitle" data-i18n="products.clientAppSubtitle">Client App</p>
+          <p class="product-card__desc" data-i18n="products.clientAppDesc">Search, compare, and book services instantly.
+            One app for restaurants,
+            gaming, sports, beauty, and more.</p>
+          <div class="product-card__tag">📱 iOS & Android</div>
+        </div>
+
+        <div class="product-card anim-fade-up" style="--delay: 0.1s">
+          <div class="product-card__icon">
+            <img src="/assets/logos/Logo512Host.png" alt="Karvon Host" width="56" height="56">
+          </div>
+          <h3 class="product-card__title" data-i18n="products.hostAppTitle">Karvon Host</h3>
+          <p class="product-card__subtitle" data-i18n="products.hostAppSubtitle">Partner Dashboard</p>
+          <p class="product-card__desc" data-i18n="products.hostAppDesc">Your booking command center. Manage
+            availability, customers, analytics, and
+            marketing — all in one place.</p>
+          <div class="product-card__tag">💻 Web + Mobile</div>
+        </div>
+
+        <div class="product-card product-card--highlight anim-fade-up" style="--delay: 0.2s">
+          <div class="product-card__icon">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <rect width="56" height="56" rx="14" fill="#004225" />
+              <path d="M18 20h20M18 28h14M18 36h8" stroke="#ffb002" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="40" cy="36" r="5" fill="#ffb002" />
+              <path d="M38.5 36l1.5 1.5 3-3" stroke="#004225" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="product-card__title" data-i18n="products.aiAppTitle">Karvon AI</h3>
+          <p class="product-card__subtitle" data-i18n="products.aiAppSubtitle">Chat Booking Agent</p>
+          <p class="product-card__desc" data-i18n="products.aiAppDesc">Book through conversation. AI that understands
+            venues, checks availability, and
+            completes real bookings in Telegram.</p>
+          <div class="product-card__tag">🤖 AI agents</div>
+        </div>
+
+        <div class="product-card anim-fade-up" style="--delay: 0.3s">
+          <div class="product-card__icon">
+            <img src="/assets/mockups/biocard.png" alt="Karvon Biocard" width="56" height="56">
+          </div>
+          <h3 class="product-card__title" data-i18n="products.bioAppTitle">Biocards + QR</h3>
+          <p class="product-card__subtitle" data-i18n="products.bioAppSubtitle">Mini-Sites for Venues</p>
+          <p class="product-card__desc" data-i18n="products.bioAppDesc">A conversion-optimized mini-page for every
+            venue. Link in bio, QR for tables —
+            direct booking entry point.</p>
+          <div class="product-card__tag">🔗 Link in Bio</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
+  <!-- ===== WHY KARVON ===== -->
+  <section class="why-karvon" id="why-karvon">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-tag" data-i18n="whyKarvon.tag">Why Karvon</span>
+        <h2 class="section-title" data-i18n="whyKarvon.title">The booking layer<br> services deserve</h2>
+      </div>
+      <div class="comparison-grid">
+        <div class="comparison-card anim-fade-up">
+          <div class="comparison-card__old">
+            <span class="comparison-card__label comparison-card__label--old"
+              data-i18n="whyKarvon.old1Label">Before</span>
+            <p data-i18n="whyKarvon.old1Desc">Calling, DMing, waiting for replies across multiple platforms</p>
+          </div>
+          <div class="comparison-card__arrow">→</div>
+          <div class="comparison-card__new">
+            <span class="comparison-card__label comparison-card__label--new" data-i18n="whyKarvon.new1Label">With
+              Karvon</span>
+            <p data-i18n="whyKarvon.new1Desc"><strong>Instant booking</strong> — search, tap, done</p>
+          </div>
+        </div>
+        <div class="comparison-card anim-fade-up" style="--delay: 0.1s">
+          <div class="comparison-card__old">
+            <span class="comparison-card__label comparison-card__label--old"
+              data-i18n="whyKarvon.old2Label">Before</span>
+            <p data-i18n="whyKarvon.old2Desc">One tool per category — separate apps for food, sports, beauty</p>
+          </div>
+          <div class="comparison-card__arrow">→</div>
+          <div class="comparison-card__new">
+            <span class="comparison-card__label comparison-card__label--new" data-i18n="whyKarvon.new2Label">With
+              Karvon</span>
+            <p data-i18n="whyKarvon.new2Desc"><strong>Multi-category</strong> — everything in one place</p>
+          </div>
+        </div>
+        <div class="comparison-card anim-fade-up" style="--delay: 0.2s">
+          <div class="comparison-card__old">
+            <span class="comparison-card__label comparison-card__label--old"
+              data-i18n="whyKarvon.old3Label">Before</span>
+            <p data-i18n="whyKarvon.old3Desc">Spreadsheets, notebooks, chat-based booking management</p>
+          </div>
+          <div class="comparison-card__arrow">→</div>
+          <div class="comparison-card__new">
+            <span class="comparison-card__label comparison-card__label--new" data-i18n="whyKarvon.new3Label">With Karvon
+              Host</span>
+            <p data-i18n="whyKarvon.new3Desc"><strong>Centralized system</strong> — one dashboard for everything</p>
+          </div>
+        </div>
+        <div class="comparison-card anim-fade-up" style="--delay: 0.3s">
+          <div class="comparison-card__old">
+            <span class="comparison-card__label comparison-card__label--old"
+              data-i18n="whyKarvon.old4Label">Before</span>
+            <p data-i18n="whyKarvon.old4Desc">Generic chatbots that can't actually do anything useful</p>
+          </div>
+          <div class="comparison-card__arrow">→</div>
+          <div class="comparison-card__new">
+            <span class="comparison-card__label comparison-card__label--new" data-i18n="whyKarvon.new4Label">With Karvon
+              AI</span>
+            <p data-i18n="whyKarvon.new4Desc"><strong>AI that executes</strong> — real bookings, not just conversation
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" id="download">
+    <div class="cta-section__bg">
+      <div class="cta-section__blob cta-section__blob--1"></div>
+      <div class="cta-section__blob cta-section__blob--2"></div>
+    </div>
+    <div class="container cta-section__inner">
+      <div class="cta-section__content anim-fade-up">
+        <h2 class="cta-section__title" data-i18n="cta.title">Ready to book smarter?</h2>
+        <p class="cta-section__subtitle" data-i18n="cta.subtitle">Join thousands of users who ditched calling and
+          back-and-forth messaging.
+          Download Karvon and book in seconds.</p>
+        <div class="cta-section__buttons">
+          <a href="#" class="btn btn--accent btn--xl" onclick="openDownloadDialog(event)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+            <span data-i18n="cta.download">Download the App</span>
+          </a>
+          <a href="#" class="btn btn--outline-light btn--xl" onclick="openPartnerDialog(event)"
+            data-i18n="cta.partner">Partner with Us</a>
+        </div>
+      </div>
+      <div class="cta-section__visual anim-fade-up" style="--delay: 0.15s">
+        <img src="/assets/mockups/booking-confirmation.png" alt="Booking Confirmation" class="cta-section__phone"
+          loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <div id="footer-placeholder"></div>
+
+  <script src="/translations.js"></script>
+  <script src="/script.js"></script>
 </body>
 
 </html>
